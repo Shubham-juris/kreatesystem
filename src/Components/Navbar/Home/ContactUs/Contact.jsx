@@ -44,7 +44,7 @@ const Contact = () => {
   };
  
   // Professional Contact Info Text with Word-by-Word Animation
-  const contactInfoText = "At Greekology, we specialize in delivering tailored software solutions to empower your business. Contact us to discuss how our expertise can drive your success.";
+  const contactInfoText = "KreateSystem is a structured approach to IT development that focuses on building innovative, scalable, and efficient software solutions. It involves a combination of cutting-edge technologies, best practices, and a streamlined workflow to create high-quality digital products.";
  
   return (
     <Box
