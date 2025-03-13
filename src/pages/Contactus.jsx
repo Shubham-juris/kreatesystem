@@ -1,11 +1,13 @@
 import React from 'react'
+import MainContactUs from '../components/MainContactUs/MainContactUs'
 
-const Contactus = () => {
+
+const ContactUs = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+  <MainContactUs/>
+    </>
   )
 }
 
-export default Contactus
+export default ContactUs;
