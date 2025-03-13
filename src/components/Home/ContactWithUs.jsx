@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 
-const ContactUs = () => {
+const ContactWithUs = () => {
   return (
     <Box sx={{ textAlign: "center", bgcolor: "#fff", p: 6 }}>
       {/* Contact Us Title with Horizontal Lines */}
@@ -51,4 +51,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactWithUs;

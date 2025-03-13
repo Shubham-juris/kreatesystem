@@ -1,11 +1,14 @@
 import React from 'react'
+import BusinessHeader from '../components/Service/BusinessHeader';
+import AboutBusiness from '../components/Service/AboutBusiness';
 
-const Services = () => {
+const Service = () => {
   return (
-    <div>
-      
-    </div>
+   <>
+   <BusinessHeader/>
+   <AboutBusiness/>
+   </>
   )
 }
 
-export default Services
+export default Service;

@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import bgImage from "../../assets/Bg.png"; // Ensure the correct path
 
-const AboutUs = () => {
+const BusinessHeader = () => {
   return (
     <Box
       sx={{
@@ -45,11 +45,11 @@ const AboutUs = () => {
             textAlign: "center",
           }}
         >
-          ABOUT US
+           BUSINESS PROCESS OUTSOURCING
         </Typography>
       </motion.div>
     </Box>
   );
 };
 
-export default AboutUs;
+export default BusinessHeader;

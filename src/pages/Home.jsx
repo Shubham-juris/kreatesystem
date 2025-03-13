@@ -1,7 +1,4 @@
-
-
 import BusinessNeed from "../components/Home/BusinessNeed";
-import ContactUs from "../components/Home/ContactUs";
 import Hero from "../components/Home/Hero";
 import Portfolio from "../components/Home/Portfolio";
 
@@ -19,7 +16,7 @@ const Home = () => {
             <WelcomeSection/>
             <BusinessNeed />
             <Portfolio/>
-            <ContactUs/>
+            {/* <ContactWithUs/> */}
 
         </>
     );

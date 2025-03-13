@@ -1,9 +1,10 @@
 
 import AboutHeader from "../components/About/Aboutheader";
+import AboutKreateSystem from "../components/About/AboutKreateSystem";
 import WhyChooseUs from "../components/About/WhyChooseUs";
-import Navbar from "../components/common/Navbar";
-import ContactUs from "../components/Home/ContactUs";
-import Portfolio from "../components/Home/Portfolio";
+import WorkWithUs from "../components/About/WorkWithUs";
+
+import ContactWithUs from "../components/Home/ContactWithUs";
 
 const About = () => {
     return (
@@ -11,11 +12,11 @@ const About = () => {
           
             <AboutHeader/>
             <WhyChooseUs/>
-            <Portfolio/>
-            <ContactUs/>
+            <AboutKreateSystem/>
+            <WorkWithUs/>
+            <ContactWithUs/>
             
         </>
     );
 };
-
 export default About;
