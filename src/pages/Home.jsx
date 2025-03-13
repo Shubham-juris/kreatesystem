@@ -1,22 +1,26 @@
-import Navbar from "../components/common/Navbar";
+
+
 import BusinessNeed from "../components/Home/BusinessNeed";
 import ContactUs from "../components/Home/ContactUs";
-import Hero from "../components/Home/Ho";
+import Hero from "../components/Home/Hero";
 import Portfolio from "../components/Home/Portfolio";
-import Service from "../components/Home/Se";
-import WelcomeSections from "../components/Home/WelcomeSections";
+
+import ServiceCard from "../components/Home/ServiceCard";
+import WelcomeSection from "../components/Home/WelcomeSection";
+
 
 
 const Home = () => {
     return (
         <>
-            <Navbar />
+           
             <Hero />
-            <Service />
-            <WelcomeSections/>
+            <ServiceCard />
+            <WelcomeSection/>
             <BusinessNeed />
             <Portfolio/>
             <ContactUs/>
+
         </>
     );
 };

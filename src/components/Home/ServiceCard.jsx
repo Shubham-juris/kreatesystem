@@ -7,7 +7,7 @@ import MarketingImage from '../../assets/Marketingimg.png';
 import SupportImage from '../../assets/Supportimg.png';
 import CRMImage from '../../assets/webimg.png';
 
-const Service = () => {
+const ServiceCard = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
       <Typography variant="h2" component="h1" align="center" gutterBottom sx={{ color: '#8B7E66', fontSize: { xs: '1.5rem', sm: '2.5rem' } }}>
@@ -63,4 +63,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default ServiceCard;
