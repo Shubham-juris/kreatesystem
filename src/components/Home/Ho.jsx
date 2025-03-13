@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import backgroundImage from "../../../assets/Bg.jpeg";
+import backgroundImage from "../../assets/Bg.png";
 
 const Hero = () => {
   return (
@@ -17,7 +17,7 @@ const Hero = () => {
         justifyContent: "center",
         textAlign: "center",
         color: "white",
-        px: 2, // Padding for better responsiveness
+        px: 2,
       }}
     >
       <Box sx={{ maxWidth: "800px" }}>
