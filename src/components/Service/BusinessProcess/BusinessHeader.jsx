@@ -1,15 +1,19 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
-import bgImage from "../../assets/Bg.png"; // Ensure the correct path
+import bgImage from "../../../assets/Bg.png"; 
 
 const BusinessHeader = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       sx={{
         position: "relative",
         width: "100%",
-        height: "300px",
+        minHeight: "250px",
+        height: isSmallScreen ? "40vh" : "40vh",
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -18,6 +22,7 @@ const BusinessHeader = () => {
         justifyContent: "center",
         marginTop: "64px",
         overflow: "hidden",
+        px: 2,
       }}
     >
       {/* Dark Overlay */}
@@ -37,15 +42,16 @@ const BusinessHeader = () => {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <Typography
-          variant="h3"
+          variant={isSmallScreen ? "h4" : "h3"}
           sx={{
             position: "relative",
             color: "white",
             fontWeight: "bold",
             textAlign: "center",
+            px: 2,
           }}
         >
-           BUSINESS PROCESS OUTSOURCING
+          BUSINESS PROCESS OUTSOURCING
         </Typography>
       </motion.div>
     </Box>

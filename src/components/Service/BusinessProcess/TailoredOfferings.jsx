@@ -7,29 +7,29 @@ import {
   ListItemText, 
   Divider 
 } from '@mui/material';
-import TailoredOfferingsImg from "../../assets/Bg.png";
+import TailoredOfferingsImg from "../../../assets/Bg.png";
 
 const TailoredOfferings = () => {
   const services = [
     {
       title: "Customer Support Outsourcing",
-      description: "Enhance customer satisfaction and loyalty with our premium outsourced customer support services, featuring 24/7 helpdesk support and seamless multichannel assistance."
+      description: "• Enhance customer satisfaction and loyalty with our premium outsourced customer support services.\n• 24/7 helpdesk support and seamless multichannel assistance."
     },
     {
       title: "Data Entry and Management",
-      description: "Streamline your operations with our meticulous data entry processes and robust data management solutions, ensuring precision and reliability."
+      description: "• Streamline your operations with our meticulous data entry processes.\n• Robust data management solutions ensuring precision and reliability."
     },
     {
       title: "Finance and Accounting Outsourcing",
-      description: "Optimize financial efficiency with our comprehensive outsourcing services, including accounts payable/receivable, bookkeeping, and financial reporting."
+      description: "• Optimize financial efficiency with our comprehensive outsourcing services.\n• Includes accounts payable/receivable, bookkeeping, and financial reporting."
     },
     {
       title: "Human Resources Outsourcing",
-      description: "Elevate HR operations with our expert solutions in payroll management, benefits administration, and regulatory compliance."
+      description: "• Elevate HR operations with our expert solutions.\n• Payroll management, benefits administration, and regulatory compliance."
     },
     {
       title: "Back Office Operations Outsourcing",
-      description: "Maximize productivity by delegating administrative tasks, document processing, and inventory management to our skilled professionals."
+      description: "• Maximize productivity by delegating administrative tasks.\n• Document processing and inventory management handled by skilled professionals."
     }
   ];
 
@@ -55,7 +55,8 @@ const TailoredOfferings = () => {
           flex: 1,
           pr: { md: 6 },
           mb: { xs: 4, md: 0 },
-          maxWidth: { md: '50%' },
+          maxWidth: { xs: '100%', md: '50%' },
+          textAlign: { xs: 'center', md: 'left' }
         }}
       >
         <Typography
@@ -65,7 +66,7 @@ const TailoredOfferings = () => {
             fontWeight: 700,
             color: '#1a237e',
             mb: 3,
-            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+            fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem' },
             lineHeight: 1.2,
           }}
         >
@@ -77,6 +78,7 @@ const TailoredOfferings = () => {
               borderWidth: '2px',
               mt: 1,
               mb: 3,
+              mx: { xs: 'auto', md: 0 }
             }}
           />
         </Typography>
@@ -103,7 +105,7 @@ const TailoredOfferings = () => {
                     sx={{
                       fontWeight: 600,
                       color: '#333',
-                      fontSize: '1.1rem',
+                      fontSize: { xs: '1rem', sm: '1.1rem' },
                     }}
                   >
                     {service.title}
@@ -111,11 +113,13 @@ const TailoredOfferings = () => {
                 }
                 secondary={
                   <Typography
+                    component="span"
                     sx={{
                       color: '#666',
                       mt: 0.5,
-                      fontSize: '0.95rem',
+                      fontSize: { xs: '0.9rem', sm: '0.95rem' },
                       lineHeight: 1.6,
+                      whiteSpace: 'pre-line',
                     }}
                   >
                     {service.description}
@@ -131,9 +135,11 @@ const TailoredOfferings = () => {
       <Box
         sx={{
           flex: 1,
-          maxWidth: { md: '50%' },
-          display: { xs: 'none', sm: 'block' },
-          minHeight: { sm: '400px', md: '100px' }, // Increased minimum height
+          maxWidth: { xs: '100%', md: '50%' },
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
         }}
       >
         <Box
@@ -141,15 +147,12 @@ const TailoredOfferings = () => {
           src={TailoredOfferingsImg}
           alt="Professional team collaboration"
           sx={{
-            width: '100%',
-            height: { sm: '400px', md: '500px' }, // Explicitly set taller height
+            width: { xs: '100%', md: '80%' }, 
+            height: { xs: 'auto', md: '600px' },
+            maxHeight: { md: '600px' }, 
             borderRadius: 2,
-            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
-            objectFit: 'cover', 
-            transition: 'transform 0.3s ease',
-            '&:hover': {
-              transform: 'scale(1.02)',
-            },
+            objectFit: 'cover',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
           }}
         />
       </Box>

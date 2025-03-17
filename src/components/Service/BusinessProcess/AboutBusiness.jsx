@@ -2,17 +2,17 @@ import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 
 // Import images
-import CustomizedServiceImg from "../../assets/Bg.png";
-import DedicatedTeamImg from "../../assets/Bg.png";
-import ProcessEnhancementImg from "../../assets/Bg.png";
-import IndustryInsightImg from "../../assets/Bg.png";
-import ConsistentDeliveryImg from "../../assets/Bg.png";
-import QualityAssuranceImg from "../../assets/Bg.png";
-import CustomerSupportImg from "../../assets/Bg.png";
-import DataEntryImg from "../../assets/Bg.png";
-import FinanceAccountingImg from "../../assets/Bg.png";
-import HumanResourcesImg from "../../assets/Bg.png";
-import BackOfficeImg from "../../assets/Bg.png";
+import CustomizedServiceImg from "../../../assets/Bg.png";
+import DedicatedTeamImg from "../../../assets/Bg.png";
+import ProcessEnhancementImg from "../../../assets/Bg.png";
+import IndustryInsightImg from "../../../assets/Bg.png";
+import ConsistentDeliveryImg from "../../../assets/Bg.png";
+import QualityAssuranceImg from "../../../assets/Bg.png";
+import CustomerSupportImg from "../../../assets/Bg.png";
+import DataEntryImg from "../../../assets/Bg.png";
+import FinanceAccountingImg from "../../../assets/Bg.png";
+import HumanResourcesImg from "../../../assets/Bg.png";
+import BackOfficeImg from "../../../assets/Bg.png";
 
 const services = [
   {
