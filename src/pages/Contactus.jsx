@@ -1,11 +1,12 @@
 import React from 'react'
-import MainContactUs from '../components/MainContactUs/MainContactUs'
-
+import MainContactUs from '../components/MainContactUs/MainContactUs';
+import MapComponent from '../components/MainContactUs/MapComponent';
 
 const ContactUs = () => {
   return (
     <>
-  <MainContactUs/>
+      <MainContactUs />
+      <MapComponent />
     </>
   )
 }
