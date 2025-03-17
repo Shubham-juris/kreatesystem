@@ -3,10 +3,8 @@ import { Container, Grid, Typography, Box } from "@mui/material";
 import BuildingOptimizationImg from "../../../assets/Bg.png";
 import KeyFeaturesImg from "../../../assets/Bg.png";
 import CaseStudiesImg from "../../../assets/Bg.png";
-import DynamicPricingImg from "../../../assets/Bg.png";
-import VirtualShoppingImg from "../../../assets/Bg.png";
-import dynamicPricingImage from "../../../assets/Bg.png";
 import virtualShoppingImage from "../../../assets/Bg.png";
+import DynamicPricingStrategiesImg from "../../../assets/Bg.png";
 import PersonalizedProductImg from  "../../../assets/Bg.png";
 import CustomizableCheckoutProcessesImg from  "../../../assets/Bg.png";
 
@@ -37,14 +35,14 @@ const services = [
   },
   {
     title: "Customizable Checkout Processes",
-    image: BuildingOptimizationImg,
+    image: CustomizableCheckoutProcessesImg ,
     description:
       "Create a flexible checkout process that allows customers to choose their preferred payment methods, shipping options, and delivery dates, providing a tailored experience that meets their individual needs.",
   },
   
   {
     title: "Dynamic Pricing Strategies",
-    image: CustomizableCheckoutProcessesImg,
+    image: DynamicPricingStrategiesImg,
     description:
       "Implement dynamic pricing algorithms that adjust product prices in real-time based on factors such as demand, inventory levels, and competitor pricing, optimizing revenue and maximizing profit margins.",
   },
