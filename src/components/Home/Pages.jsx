@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { keyframes } from "@emotion/react";
-import CssBaseline from '@mui/material/CssBaseline';
-
- 
-const fadeIn = keyframes`
-  0% { opacity: 0; transform: scale(0.9); }
-  100% { opacity: 1; transform: scale(1); }
-`;
+import image from "../../assets/img.png";
  
 const Sitemaintenance = () => {
   const theme = useTheme();
@@ -15,57 +8,63 @@ const Sitemaintenance = () => {
   const [isHovered, setIsHovered] = useState(false);
  
   return (
-      <Box
+    <Box
       sx={{
-          position: "relative",
-          width: "100%",
-        //   height: "100vh",
-          backgroundColor:'#fff',
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "0 16px",
-        }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        >
-       
+        position: "relative",
+        width: "100%",
+        height: "100vh",
+        // backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "0 16px",
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <Box
         sx={{
-            width: "100vw", height: "100vh", backgroundColor: "rgba(49, 47, 47, 0.64)", position: "fixed", top: 0, left: 0, zIndex: 9999, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", animation: `${fadeIn} 1.5s ease-in-out`,
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "rgba(20, 19, 19, 0.75)",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: 9999,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          boxShadow: "inset 0 0 20px rgba(0,0,0,0.7)",
         }}
-        >
-        <CssBaseline/>
+      >
         <img
-          src="https://www.svgrepo.com/show/426192/cogs-settings.svg"
+          src={image}
           alt="Maintenance Logo"
-          style={{ height: "160px", marginBottom: "22px", animation: "pulse 2s infinite" }}
+          style={{
+            height: "400px",
+            marginBottom: "22px",
+          }}
         />
         <Typography
           variant="h2"
           fontWeight="bold"
-          color={isHovered ? "yellow" : "yellow"}
           sx={{
-            fontSize: { xs: "20px", sm: "24px", md: "40px", lg: "60px" },
+            fontSize: { xs: "10px", sm: "14px", md: "16px", lg: "30px" },
             mt: 2,
-            transition: "color 0.3s ease-in-out",
+            textShadow: "2px 2px 10px rgba(57, 97, 19, 0.51)",
+            lineHeight: 1.5,
+            color : "white",
+            width : "1300px"
           }}
         >
-          We're Enhancing Your Experience...
+         We are currently experiencing technical difficulties and are conducting emergency maintenance. Our team is working to resolve the issue as quickly as possible. We apologize for the inconvenience and appreciate your patience.
         </Typography>
  
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          color={isHovered ? "black" : "black"}
-          sx={{
-            fontSize: { xs: "14px", sm: "16px", md: "25px", lg: "30px" },
-            mt: 2,
-            transition: "color 0.3s ease-in-out",
-          }}
-        >
-         Our team is making improvements. Thank you for your patience!
-        </Typography>
+        
       </Box>
     </Box>
   );

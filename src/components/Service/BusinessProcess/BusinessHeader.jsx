@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
 import bgImage from "../../../assets/Bg.png"; 
 
 const BusinessHeader = () => {
