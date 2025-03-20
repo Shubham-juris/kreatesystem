@@ -3,9 +3,9 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Careers from "../pages/Careers";
 import Service from "../pages/Service";
-import Solutions from "../pages/Solutions";
-import Navbar from "../components/common/Navbar";
+// import Solutions from "../pages/Solutions";
 import ContactUs from "../pages/Contactus";
+import Navbar from "../components/common/Navbar";
 
 
 
@@ -21,7 +21,7 @@ const AppRoutes = () => {
         <Route path="/careers" element={<Careers />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/solutions" element={<Solutions />} />
+        {/* <Route path="/solutions" element={<Solutions />} /> */}
       </Routes>
     </>
   );
