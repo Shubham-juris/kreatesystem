@@ -369,7 +369,7 @@ function Navbar(props) {
               <Button
                 color="inherit"
                 onClick={handleClickServices}
-                sx={{ color: "#FFD700", fontWeight: "bold", fontSize: "16px" }}
+                sx={{ color: "#283878", fontWeight: "bold", fontSize: "16px" }}
               >
                 SERVICES{" "}
                 {openServices ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -438,7 +438,7 @@ function Navbar(props) {
                 color="inherit"
                 onClick={handleClick}
                 sx={{
-                  color: "#1976d2",
+                  color: "#283878",
                   fontWeight: "bold",
                   fontSize: "16px",
                 }}
@@ -482,7 +482,7 @@ function Navbar(props) {
                 color="inherit"
                 onClick={handleClickCaseStudies}
                 sx={{
-                  color: "#FFD700",
+                  color: "#283878",
                   fontWeight: "bold",
                   fontSize: "16px",
                   marginLeft: "20px",
