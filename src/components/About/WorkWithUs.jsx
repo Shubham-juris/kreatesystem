@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import SocialImage from "../../assets/socialimg.png";
@@ -12,18 +12,48 @@ const WorkWithUs = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <Box sx={{ textAlign: "center", bgcolor: "#fff", p: 3, position: "relative", width: "100%", maxWidth: "1400px", margin: "auto", borderRadius: "10px", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", mt: 4 }}>
+    <Box
+      sx={{
+        textAlign: "center",
+        bgcolor: "#fff",
+        p: 3,
+        position: "relative",
+        width: "100%",
+        maxWidth: "1400px",
+        margin: "auto",
+        borderRadius: "10px",
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+        mt: 4,
+      }}
+    >
       {/* Header */}
-      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 4 }}>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          mb: 4,
+        }}
+      >
         <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2 }}>
+        <Typography
+          variant="h6"
+          sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2 }}
+        >
           Work With Us
         </Typography>
         <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
       </Box>
 
       {/* Image Grid */}
-      <Box sx={{ display: "flex", justifyContent: "center", gap: 3, flexWrap: "wrap" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 3,
+          flexWrap: "wrap",
+        }}
+      >
         {images.map((img, index) => (
           <motion.div
             key={index}
@@ -42,7 +72,10 @@ const WorkWithUs = () => {
               height: "200px",
               overflow: "hidden",
               borderRadius: "10px",
-              boxShadow: currentIndex === index ? "0 10px 20px rgba(0,0,0,0.3)" : "0 4px 8px rgba(0,0,0,0.1)",
+              boxShadow:
+                currentIndex === index
+                  ? "0 10px 20px rgba(0,0,0,0.3)"
+                  : "0 4px 8px rgba(0,0,0,0.1)",
             }}
           >
             <img

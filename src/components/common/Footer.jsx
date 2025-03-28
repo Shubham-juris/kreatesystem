@@ -1,18 +1,17 @@
-import React from "react";
 import { Box, Typography, Link } from "@mui/material";
- 
+
 const Footer = () => {
   return (
-<Box
+    <Box
       sx={{
         bgcolor: "#EAEAA6", // Light yellow-green background
         color: "#000", // Text color
         textAlign: "center",
         p: 3,
       }}
->
+    >
       {/* Navigation Links */}
-<Box
+      <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
@@ -20,7 +19,7 @@ const Footer = () => {
           gap: 2,
           mb: 2,
         }}
->
+      >
         {[
           "Home",
           "About",
@@ -33,22 +32,27 @@ const Footer = () => {
           "Software Development",
           "Contact us",
         ].map((item) => (
-<Typography
+          <Typography
             key={item}
             variant="body2"
-            sx={{ cursor: "pointer", "&:hover": { textDecoration: "underline" } }}
->
+            sx={{
+              cursor: "pointer",
+              "&:hover": { textDecoration: "underline" },
+            }}
+          >
             {item}
-</Typography>
+          </Typography>
         ))}
-</Box>
- 
+      </Box>
+
       {/* Footer Information */}
-<Typography variant="h6" fontWeight="bold" mb={1}>
+      <Typography variant="h6" fontWeight="bold" mb={1}>
         Kreate Systems
-</Typography>
-<Typography variant="body2">Kreate Systems - All Rights Reserved.</Typography>
-<Link
+      </Typography>
+      <Typography variant="body2">
+        Kreate Systems - All Rights Reserved.
+      </Typography>
+      <Link
         href="mailto:Kreatesystems8@gmail.com"
         sx={{
           display: "block",
@@ -57,11 +61,11 @@ const Footer = () => {
           color: "#000",
           "&:hover": { color: "#007BFF" },
         }}
->
+      >
         Kreatesystems8@gmail.com
-</Link>
-</Box>
+      </Link>
+    </Box>
   );
 };
- 
+
 export default Footer;

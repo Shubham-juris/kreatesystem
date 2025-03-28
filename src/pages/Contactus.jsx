@@ -1,6 +1,5 @@
-import React from 'react'
-import MainContactUs from '../components/MainContactUs/MainContactUs';
-import MapComponent from '../components/MainContactUs/MapComponent';
+import MainContactUs from "../components/MainContactUs/MainContactUs";
+import MapComponent from "../components/MainContactUs/MapComponent";
 
 const ContactUs = () => {
   return (
@@ -8,7 +7,7 @@ const ContactUs = () => {
       <MainContactUs />
       <MapComponent />
     </>
-  )
-}
+  );
+};
 
 export default ContactUs;

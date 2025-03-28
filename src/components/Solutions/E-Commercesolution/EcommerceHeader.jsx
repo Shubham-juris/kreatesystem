@@ -1,7 +1,6 @@
-import React from "react";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
-import bgImage from "../../../assets/Bg.png"; 
+import bgImage from "../../../assets/Bg.png";
 
 const Ecommerceheader = () => {
   const theme = useTheme();
