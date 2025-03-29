@@ -10,6 +10,8 @@ import Ecommerceheader from "../components/Solutions/E-Commercesolution/Ecommerc
 // import SoftwareSolutionsSection from "../components/Solutions/E-Commercesolution/SoftwareSolutionsSection";
 import BusinessHeader from "../components/Service/BusinessProcess/BusinessHeader";
 import ConsulingSrevice from "../components/Service/ConsulingSrevice/ConsulingSrevice";
+import SoftwareDevelopement from "../components/Solutions/Software developement/SoftwareDevelopement";
+
 
 
 const AppRoutes = () => {
@@ -27,7 +29,7 @@ const AppRoutes = () => {
         <Route path="/solutions" element={<Solutions />} />
 
         <Route path="/consultingservices" element={<ConsulingSrevice />} />
-
+        <Route path="/softwaresolutionssection" element={<SoftwareDevelopement />} />
         <Route path="/businessheader" element={<BusinessHeader />} />
       
       </Routes>
