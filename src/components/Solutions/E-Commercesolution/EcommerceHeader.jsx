@@ -9,13 +9,13 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import BuildingOptimizationImg from "../../../assets/Bg.png";
-import KeyFeaturesImg from "../../../assets/Bg.png";
-import CaseStudiesImg from "../../../assets/Bg.png";
-import virtualShoppingImage from "../../../assets/Bg.png";
-import DynamicPricingStrategiesImg from "../../../assets/Bg.png";
-import PersonalizedProductImg from "../../../assets/Bg.png";
-import CustomizableCheckoutProcessesImg from "../../../assets/Bg.png";
+import BuildingOptimizationImg from "../../../assets/Solution Img/DevelopmentImg.jpg";
+import KeyFeaturesImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
+import CaseStudiesImg from "../../../assets/Solution Img/CloudServices.png";
+import virtualShoppingImage from "../../../assets/Solution Img/ITConsultingImg.jpg";
+import DynamicPricingStrategiesImg from "../../../assets/Solution Img/DevelopmentImg.jpg";
+import PersonalizedProductImg from "../../../assets/Solution Img/CloudServices.png";
+import CustomizableCheckoutProcessesImg from "../../../assets/Solution Img/img.jpg";
 import bgImage from "../../../assets/Bg.png";
 
 const services = [
@@ -82,7 +82,7 @@ const Ecommerceheader = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          mt: { xs: 8, sm: 10 },
+          mt: { xs: 8, sm: 4 },
           overflow: "hidden",
           px: { xs: 2, sm: 4 },
         }}
