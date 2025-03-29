@@ -30,8 +30,7 @@ const navItems = ["Home", "About", "Contact Us", "Careers"];
 
 const slideDown = keyframes`
   from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-`;
+  to { transform: translateY(0); opacity: 1; }`;
 
 function Navbar(props) {
   const { window } = props;
