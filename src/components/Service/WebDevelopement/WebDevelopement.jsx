@@ -2,74 +2,73 @@ import { Box, Typography, useTheme, useMediaQuery, Container, Grid, Divider, Lis
 import { motion } from "framer-motion";
 import bgImage from "../../../assets/Bg.png";
 
-// Assuming these should be unique images - update paths as needed
-import CustomizedServiceImg from "../../../assets/service/collage.jpg";
-import DedicatedTeamImg from "../../../assets/service/employees.jpg";
-import ProcessEnhancementImg from "../../../assets/service/office.jpg";
-import IndustryInsightImg from "../../../assets/service/working.jpg";
-import ConsistentDeliveryImg from "../../../assets/service/pexels.jpg";
-// import QualityAssuranceImg from "../../../assets/Bg.png";
-import TailoredOfferingsImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
+
+import ExpertTeamImg from "../../../assets/WebDevelopementimg/img1.jpg";
+import VersatilityImg from "../../../assets/WebDevelopementimg/img2.jpg";
+import BrandConsistencyImg from "../../../assets/WebDevelopementimg/img5.jpg";
+import ReliableConsultingImg from "../../../assets/WebDevelopementimg/img4.jpg";
+import QualityAssuranceImg from "../../../assets/WebDevelopementimg/img1.jpg";
+import TailoredOfferingsImg from "../../../assets/WebDevelopementimg/img2.jpg";
  
-const ConsultingService = () => {
+const WebDevelopement = () => {
     const servicesAbout = [ 
         {
             title: "Expert Team",
             description:
-                "At Kreate System, our team of experienced consultants is dedicated to understanding your unique needs and delivering tailored solutions that align with your business objectives. ",
-            image: CustomizedServiceImg,
+                "Our experienced web developers craft tailored solutions aligned with your business goals. With a wealth of expertise and a commitment to excellence, our team ensures that your website reflects your unique vision and objectives.  ",
+            image: ExpertTeamImg,
         },
         {
-            title: "Strategic Planning ",
+            title: "Versatility   ",
             description:
-                "We provide strategic planning services to help you define clear goals, identify opportunities, and develop actionable plans to achieve sustainable growth and success.",
-            image: DedicatedTeamImg,
+                "Our solutions cater to diverse industries, ensuring your website reflects your unique identity. Whether you're in retail, hospitality, finance, or any other industry. ",
+            image: VersatilityImg,
         },
         {
-            title: "Industry Expertise ",
+            title: "Consistency  ",
             description:
-                "With deep industry expertise across various sectors, our consultants bring valuable insights and best practices to help you navigate complex challenges and seize new opportunities.",
-            image: ProcessEnhancementImg,
+                "We ensure your website aligns seamlessly with your brand identity, leaving a lasting impression. From color schemes and typography to layout and user experience, we maintain consistency across every aspect of your website. ",
+            image: BrandConsistencyImg,
         },
         {
             title: "Consistency ",
             description:
                 "We maintain consistency in delivering high-quality consulting services, ensuring that every solution aligns with your organization's values, vision, and objectives.",
-            image: IndustryInsightImg,
+            image: ReliableConsultingImg,
         },
         {
-            title: "Quality ",
+            title: "Quality Assurance  ",
             description:
-                "Quality is at the forefront of our consulting approach. We adhere to the highest standards of professionalism and integrity, providing reliable advice and support to drive tangible results.",
-            image: ConsistentDeliveryImg,
+                "Quality is our top priority. We adhere to the highest standards of craftsmanship and attention to detail to ensure that your website is not only visually stunning but also technically flawless.",
+            image:   QualityAssuranceImg,
         }
     ];
 
     const tailoredServices = [
         {
-            title: "Digital Strategy",
+            title: "Custom Development:",
             description:
-                "Develop a comprehensive digital strategy to optimize your online presence, enhance customer engagement, and drive business growth. ",
+                " Bespoke websites tailored to your brand's objectives. Whether you need a simple portfolio site or a complex enterprise solution.  ",
         },
         {
-            title: "Technology Consulting",
+            title: "E-commerce Solutions: ",
             description:
-                "Leverage the latest technologies and IT solutions to streamline operations, improve efficiency, and gain a competitive edge in the market",
+                "• Drive sales with customized e-commerce platforms. From storefront design to payment processing integration. ",
         },
         {
-            title: "Technology Consulting: ",
+            title: "Content Management Systems: ",
             description:
-                "Leverage the latest technologies and IT solutions to streamline operations, improve efficiency, and gain a competitive edge in the market.",
+                " Manage website content effortlessly with our user-friendly systems ",
         },
         {
-            title: "Business Process Optimization",
+            title: "Web Applications:",
             description:
-                " Identify inefficiencies in your business processes and implement solutions to enhance productivity, reduce costs, and improve overall performance. ",
+                " Streamline business processes with custom applications. Whether you need a CRM system, project management tool, or internal portal. ",
         },
         {
-            title: "Change Management",
+            title: "Maintenance and Support:",
             description:
-                " Implement effective change management strategies to facilitate smooth transitions, minimize resistance, and ensure successful organizational change initiatives",
+                "  Ensure secure, optimized performance.",
         },
         {
             title: "Performance Improvement",
@@ -126,7 +125,7 @@ const ConsultingService = () => {
                             px: 2,
                         }}
                     >
-                        Consulting Service
+                        Web Developement
                     </Typography>
                 </motion.div>
             </Box>
@@ -152,7 +151,7 @@ const ConsultingService = () => {
                           px: 2,
                         }}
                       >
-                        CUSTOMIZED SERVICE
+                        CUSTOM WEB 
                       </Typography>
                       <Divider
                         sx={{
@@ -173,8 +172,7 @@ const ConsultingService = () => {
                         fontSize: { xs: "0.95rem", sm: "1rem" },
                       }}
                     >
-                     Our consulting services are tailored to address your specific business challenges and goals, providing strategic guidance and actionable insights to drive success. With our comprehensive consulting services, we empower you to overcome challenges, capitalize on opportunities, and achieve sustainable growth and success in today's dynamic business environment B
-                    </Typography>
+                     We specialize in crafting custom web solutions tailored to your business needs. From simple landing pages to complex e-commerce platforms, our team of experienced developers ensures that your website not only looks great but also functions seamlessly across all devices.</Typography>
                   </Container>
             
 
@@ -335,4 +333,4 @@ const ConsultingService = () => {
     );
 };
 
-export default ConsultingService;
+export default WebDevelopement;

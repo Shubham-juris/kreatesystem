@@ -3,78 +3,73 @@ import { motion } from "framer-motion";
 import bgImage from "../../../assets/Bg.png";
 
 // Assuming these should be unique images - update paths as needed
-import CustomizedServiceImg from "../../../assets/service/collage.jpg";
-import DedicatedTeamImg from "../../../assets/service/employees.jpg";
-import ProcessEnhancementImg from "../../../assets/service/office.jpg";
-import IndustryInsightImg from "../../../assets/service/working.jpg";
-import ConsistentDeliveryImg from "../../../assets/service/pexels.jpg";
+import ExpertTeamImg from "../../../assets/uiuxDesignimg/img1.jpg";
+import CreativityImg from "../../../assets/uiuxDesignimg/img2.jpg";
+import AdaptabilityImg from "../../../assets/uiuxDesignimg/img3.jpg";
+import ConsistencyImg from "../../../assets/uiuxDesignimg/img4.jpg";
+import QualityImg from "../../../assets/uiuxDesignimg/img1.jpg";
 // import QualityAssuranceImg from "../../../assets/Bg.png";
-import TailoredOfferingsImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
+import TailoredOfferingsImg from "../../../assets/uiuxDesignimg/img5.jpg";
  
-const ConsultingService = () => {
+const UiUxDesign = () => {
     const servicesAbout = [ 
         {
             title: "Expert Team",
             description:
-                "At Kreate System, our team of experienced consultants is dedicated to understanding your unique needs and delivering tailored solutions that align with your business objectives. ",
-            image: CustomizedServiceImg,
+                "Our team of skilled UI/UX designers is dedicated to creating intuitive and visually appealing interfaces. With their expertise and user-centric approach, they ensure that every design enhances usability and meets your objectives.",
+            image: ExpertTeamImg,
         },
         {
-            title: "Strategic Planning ",
+            title: "Creativity ",
             description:
-                "We provide strategic planning services to help you define clear goals, identify opportunities, and develop actionable plans to achieve sustainable growth and success.",
-            image: DedicatedTeamImg,
+                " We infuse creativity into our UI/UX design solutions, delivering unique and innovative designs that captivate and inspire your audience..",
+            image: CreativityImg,
         },
         {
-            title: "Industry Expertise ",
+            title: "Adaptability ",
             description:
-                "With deep industry expertise across various sectors, our consultants bring valuable insights and best practices to help you navigate complex challenges and seize new opportunities.",
-            image: ProcessEnhancementImg,
+                " From website interfaces and mobile apps to software applications and interactive prototypes, our UI/UX design services adapt to diverse industries and user preferences, ensuring seamless navigation and interaction.",
+            image: AdaptabilityImg,
         },
         {
             title: "Consistency ",
             description:
-                "We maintain consistency in delivering high-quality consulting services, ensuring that every solution aligns with your organization's values, vision, and objectives.",
-            image: IndustryInsightImg,
+                "We maintain consistency across all your UI/UX design elements, ensuring that every interface aligns seamlessly with your brand identity and reinforces your message.",
+            image: ConsistencyImg,
         },
         {
             title: "Quality ",
             description:
-                "Quality is at the forefront of our consulting approach. We adhere to the highest standards of professionalism and integrity, providing reliable advice and support to drive tangible results.",
-            image: ConsistentDeliveryImg,
+                "Quality is paramount in our approach. We meticulously review and test every design to ensure that it meets the highest standards of usability, accessibility, and user satisfaction ",
+            image: QualityImg,
         }
     ];
 
     const tailoredServices = [
         {
-            title: "Digital Strategy",
+            title: "Website Interface Design:",
             description:
-                "Develop a comprehensive digital strategy to optimize your online presence, enhance customer engagement, and drive business growth. ",
+                " Create visually stunning and intuitive website interfaces that enhance user experience and drive engagement. ",
         },
         {
-            title: "Technology Consulting",
+            title: "Mobile App Design:",
             description:
-                "Leverage the latest technologies and IT solutions to streamline operations, improve efficiency, and gain a competitive edge in the market",
+                " Design user-friendly and responsive mobile app interfaces that optimize functionality and usability across devices. ",
         },
         {
-            title: "Technology Consulting: ",
+            title: "Software Application Design:",
             description:
-                "Leverage the latest technologies and IT solutions to streamline operations, improve efficiency, and gain a competitive edge in the market.",
+                "Develop intuitive and efficient software application interfaces that streamline user workflows and maximize productivity. ",
         },
         {
-            title: "Business Process Optimization",
+            title: "Interactive Prototypes:",
             description:
-                " Identify inefficiencies in your business processes and implement solutions to enhance productivity, reduce costs, and improve overall performance. ",
+                "  Bring your ideas to life with interactive prototypes that allow for user testing and feedback, ensuring optimal usability and satisfaction. ",
         },
         {
-            title: "Change Management",
+            title: "User Research and Testing:",
             description:
-                " Implement effective change management strategies to facilitate smooth transitions, minimize resistance, and ensure successful organizational change initiatives",
-        },
-        {
-            title: "Performance Improvement",
-            description:
-                " Assess performance metrics and key performance indicators (KPIs) to identify areas for improvement.",
+                "  Conduct thorough user research and testing to identify user needs and preferences, informing the design process and ensuring user satisfaction.",
         },
     ];
 
@@ -126,7 +121,7 @@ const ConsultingService = () => {
                             px: 2,
                         }}
                     >
-                        Consulting Service
+                        Ui/Ux Design
                     </Typography>
                 </motion.div>
             </Box>
@@ -152,7 +147,7 @@ const ConsultingService = () => {
                           px: 2,
                         }}
                       >
-                        CUSTOMIZED SERVICE
+                        CUSTOM DESIGN SOLUTIONS 
                       </Typography>
                       <Divider
                         sx={{
@@ -173,39 +168,46 @@ const ConsultingService = () => {
                         fontSize: { xs: "0.95rem", sm: "1rem" },
                       }}
                     >
-                     Our consulting services are tailored to address your specific business challenges and goals, providing strategic guidance and actionable insights to drive success. With our comprehensive consulting services, we empower you to overcome challenges, capitalize on opportunities, and achieve sustainable growth and success in today's dynamic business environment B
+                     Our UI/UX design services are tailored to meet your specific needs, enhancing user experience and engagement across digital platforms. With our comprehensive UI/UX design services, we help you unlock the full potential of digital experiences and achieve your business objectives with confidence.
                     </Typography>
                   </Container>
             
 
-            <Container sx={{ py: 5 }}>
-                {servicesAbout.map((service, index) => (
-                    <Grid
-                        container
-                        spacing={4}
-                        key={index}
-                        alignItems="center"
-                        sx={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse", mb: 5 }}
-                    >
-                        <Grid item xs={12} md={6}>
-                            <img
-                                src={service.image}
-                                alt={service.title}
-                                style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-                            />
-                        </Grid>
+                  <Container sx={{ py: 0 }}>
+    {servicesAbout.map((service, index) => (
+        <Box
+            key={index}
+            display="flex"
+            flexDirection={index % 2 === 0 ? "row" : "row-reverse"}
+            alignItems="center"
+            mb={5}
+            gap={30}
+        >
+            <Box flex={1} display="flex" justifyContent="center">
+                <img
+                    src={service.image}
+                    alt={service.title}
+                    style={{
+                        width: "500px",
+                        height: "500px",
+                        borderRadius: "50%",
+                        objectFit: "cover"
+                    }}
+                />
+            </Box>
 
-                        <Grid item xs={12} md={6}>
-                            <Typography variant="h4" sx={{ color: "#6D6D4E", fontWeight: "bold", mb: 2 }}>
-                                {service.title}
-                            </Typography>
-                            <Typography variant="body1" sx={{ color: "#5A5A5A" }}>
-                                {service.description}
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                ))}
-            </Container>
+            <Box flex={1}>
+                <Typography variant="h4" sx={{ color: "#6D6D4E", fontWeight: "bold", mb: 2 }}>
+                    {service.title}
+                </Typography>
+                <Typography variant="body1" sx={{ color: "#5A5A5A" }}>
+                    {service.description}
+                </Typography>
+            </Box>
+        </Box>
+    ))}
+</Container>
+
 
             {/* Tailored Offerings Section */}
             <Box
@@ -335,4 +337,4 @@ const ConsultingService = () => {
     );
 };
 
-export default ConsultingService;
+export default UiUxDesign;

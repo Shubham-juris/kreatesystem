@@ -2,64 +2,63 @@ import { Box, Typography, useTheme, useMediaQuery, Container, Grid, Divider, Lis
 import { motion } from "framer-motion";
 import bgImage from "../../../assets/Bg.png";
 
-// Assuming these should be unique images - update paths as needed
-import CustomizedServiceImg from "../../../assets/service/collage.jpg";
-import DedicatedTeamImg from "../../../assets/service/employees.jpg";
-import ProcessEnhancementImg from "../../../assets/service/office.jpg";
-import IndustryInsightImg from "../../../assets/service/working.jpg";
-import ConsistentDeliveryImg from "../../../assets/service/pexels.jpg";
-// import QualityAssuranceImg from "../../../assets/Bg.png";
-import TailoredOfferingsImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
+
+import CustomizedServiceImg from "../../../assets/GraphicDesign/img1.jpg";
+import DedicatedTeamImg from "../../../assets/GraphicDesign/img2.jpg";
+import ProcessEnhancementImg from "../../../assets/GraphicDesign/img3.jpg";
+import IndustryInsightImg from "../../../assets/GraphicDesign/img4.jpg";
+import ConsistentDeliveryImg from "../../../assets/GraphicDesign/img1.jpg";
+import TailoredOfferingsImg from "../../../assets/GraphicDesign/img5.jpg";
  
-const ConsultingService = () => {
+const GraphicDesign = () => {
     const servicesAbout = [ 
         {
             title: "Expert Team",
             description:
-                "At Kreate System, our team of experienced consultants is dedicated to understanding your unique needs and delivering tailored solutions that align with your business objectives. ",
+                "Our team of skilled graphic designers is dedicated to bringing your vision to life. With their expertise and creativity, they ensure that every design reflects your brand identity and resonates with your audience . ",
             image: CustomizedServiceImg,
         },
         {
-            title: "Strategic Planning ",
+            title: "Innovation  ",
             description:
-                "We provide strategic planning services to help you define clear goals, identify opportunities, and develop actionable plans to achieve sustainable growth and success.",
+                "We deliver innovative graphic design solutions that captivate and engage your audience, helping you make a memorable impression in today's competitive market",
             image: DedicatedTeamImg,
         },
         {
-            title: "Industry Expertise ",
+            title: "Versatility  ",
             description:
-                "With deep industry expertise across various sectors, our consultants bring valuable insights and best practices to help you navigate complex challenges and seize new opportunities.",
+                "From branding and logo design to marketing collateral and digital assets, our graphic design services cater to diverse industries and purposes, ensuring that your designs are versatile and effective. ",
             image: ProcessEnhancementImg,
         },
         {
             title: "Consistency ",
             description:
-                "We maintain consistency in delivering high-quality consulting services, ensuring that every solution aligns with your organization's values, vision, and objectives.",
+                "We maintain consistency across all your graphic design assets, ensuring that every piece aligns seamlessly with your brand identity and reinforces your message.",
             image: IndustryInsightImg,
         },
         {
             title: "Quality ",
             description:
-                "Quality is at the forefront of our consulting approach. We adhere to the highest standards of professionalism and integrity, providing reliable advice and support to drive tangible results.",
+                "Quality is our top priority. We meticulously review every design to ensure that it meets the highest standards of craftsmanship and attention to detail.",
             image: ConsistentDeliveryImg,
         }
     ];
 
     const tailoredServices = [
         {
-            title: "Digital Strategy",
+            title: "Branding and Logo Design:",
             description:
-                "Develop a comprehensive digital strategy to optimize your online presence, enhance customer engagement, and drive business growth. ",
+                "Create a strong brand identity with a custom logo and branding materials that reflect your unique personality and values ",
         },
         {
-            title: "Technology Consulting",
+            title: "Marketing Collateral:",
             description:
-                "Leverage the latest technologies and IT solutions to streamline operations, improve efficiency, and gain a competitive edge in the market",
+                " From business cards and brochures to posters and flyers, we design eye-catching marketing materials that leave a lasting impression on your audience",
         },
         {
-            title: "Technology Consulting: ",
+            title: "Digital Assets:  ",
             description:
-                "Leverage the latest technologies and IT solutions to streamline operations, improve efficiency, and gain a competitive edge in the market.",
+                "Enhance your online presence with engaging digital assets, including social media graphics, website banners, and email templates. ",
         },
         {
             title: "Business Process Optimization",
@@ -126,7 +125,7 @@ const ConsultingService = () => {
                             px: 2,
                         }}
                     >
-                        Consulting Service
+                        Graphic Design
                     </Typography>
                 </motion.div>
             </Box>
@@ -152,7 +151,7 @@ const ConsultingService = () => {
                           px: 2,
                         }}
                       >
-                        CUSTOMIZED SERVICE
+                        CUSTOM DESIGN 
                       </Typography>
                       <Divider
                         sx={{
@@ -173,8 +172,7 @@ const ConsultingService = () => {
                         fontSize: { xs: "0.95rem", sm: "1rem" },
                       }}
                     >
-                     Our consulting services are tailored to address your specific business challenges and goals, providing strategic guidance and actionable insights to drive success. With our comprehensive consulting services, we empower you to overcome challenges, capitalize on opportunities, and achieve sustainable growth and success in today's dynamic business environment B
-                    </Typography>
+                     Our graphic design services are customized to suit your unique requirements, ensuring your brand stands out in today's digital clutter. We work closely with you to understand your objectives and create visually compelling designs that resonate with your audience, helping you leave a lasting impact in the competitive online space.</Typography>
                   </Container>
             
 
@@ -191,7 +189,8 @@ const ConsultingService = () => {
                             <img
                                 src={service.image}
                                 alt={service.title}
-                                style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+                                
+                                style={{ width: "80%", height: "80",  borderRadius: "8px" }}
                             />
                         </Grid>
 
@@ -335,4 +334,4 @@ const ConsultingService = () => {
     );
 };
 
-export default ConsultingService;
+export default GraphicDesign;

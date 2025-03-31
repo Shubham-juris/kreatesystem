@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Grid, Typography, Card, CardMedia, CardContent } from '@mui/material';
-import WebImage from '../../assets/Appimg.png';
-import AppImage from '../../assets/Appimg.png';
-import SocialImage from '../../assets/socialimg.png';
-import MarketingImage from '../../assets/Marketingimg.png';
-import SupportImage from '../../assets/Supportimg.png';
-import CRMImage from '../../assets/webimg.png';
+import WebImage from '../../assets/WebDevelopementimg/img1.jpg';
+import AppImage from '../../assets/DigitalMarketingImg/img4.jpg';
+import SocialImage from '../../assets/uiuxDesignimg/img1.jpg';
+import MarketingImage from '../../assets/GraphicDesign/img4.jpg';
+import SupportImage from '../../assets/uiuxDesignimg/img5.jpg';
+import CRMImage from '../../assets/DigitalMarketingImg/img5.jpg';
 
 const ServiceCard = () => {
   return (
