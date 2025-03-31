@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import WebImage from "../../assets/SolutionImg/img.png";
+import WebImage from "../../assets/DigitalMarketingImg/Img1.jpg";
 
 const BusinessNeed = () => {
   return (
