@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // Import images
 import bgImage from "../../../assets/Bg.png";
-import CustomizedServiceImg from "../../../assets/SolutionImg/img.jpg";
+import CustomizedServiceImg from "../../../assets/SolutionImg/img.png";
 import DedicatedTeamImg from "../../../assets/SolutionImg/CloudServices.png";
 import ProcessEnhancementImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 import IndustryInsightImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
