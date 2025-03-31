@@ -15,7 +15,7 @@ import CaseStudiesImg from "../../../assets/SolutionImg/CloudServices.png";
 import virtualShoppingImage from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 import DynamicPricingStrategiesImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
 import PersonalizedProductImg from "../../../assets/SolutionImg/CloudServices.png";
-import ProcessesImg from "../../../assets/SolutionImg/img.jpg";
+import ProcessesImg from "../../../assets/service/collage.jpg";
 import bgImage from "../../../assets/Bg.png";
 
 const services = [
