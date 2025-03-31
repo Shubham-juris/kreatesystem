@@ -5,25 +5,43 @@ import SocialImage from "../../assets/socialimg.png";
 import MarketingImage from "../../assets/Marketingimg.png";
 import SupportImage from "../../assets/Supportimg.png";
 import CRMImage from "../../assets/webimg.png";
+import ExpertTeamImg from "../../assets/DigitalMarketingImg/Img1.jpg";
+import InnovationImg from "../../assets/DigitalMarketingImg/Img2.jpg";
+import VersatilityImg from "../../assets/DigitalMarketingImg/img3.jpg";
+import ConsistencyImg from "../../assets/DigitalMarketingImg/img4.jpg";
+import QualityImg from "../../assets/DigitalMarketingImg/Img2.jpg";
+import TailoredOfferingsImg from "../../assets/DigitalMarketingImg/img5.jpg";
 
 const images = [
   { src: SocialImage, label: "Social Media" },
+  { src: VersatilityImg, label: "Versatility" },
   { src: MarketingImage, label: "Marketing" },
+  { src: ConsistencyImg, label: "Consistency" },
   { src: SupportImage, label: "Customer Support" },
+  { src: QualityImg, label: "Quality" },
   { src: CRMImage, label: "CRM Solutions" },
+  { src: ExpertTeamImg, label: "Expert Team" },
+  { src: InnovationImg, label: "Innovation" },
+  { src: TailoredOfferingsImg, label: "Tailored Offerings" },
 ];
 
 const WorkWithUs = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 2000);
+      setStartIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
-  const borderColors = ["#6A5ACD", "#FF6347", "#32CD32", "#FFD700"];
+  const visibleImages = [
+    images[startIndex],
+    images[(startIndex + 1) % images.length],
+    images[(startIndex + 2) % images.length],
+    images[(startIndex + 3) % images.length],
+  ];
 
   return (
     <Box
@@ -41,10 +59,7 @@ const WorkWithUs = () => {
         mt: 5,
       }}
     >
-      <Typography
-        variant="h4"
-        sx={{ fontWeight: "bold", color: "#6A5ACD", mb: 3 }}
-      >
+      <Typography variant="h4" sx={{ fontWeight: "bold", color: "#6A5ACD", mb: 3 }}>
         Work With Us
       </Typography>
 
@@ -52,63 +67,45 @@ const WorkWithUs = () => {
         sx={{
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
-          gap: 2,
+          gap: 3,
           justifyContent: "center",
           alignItems: "center",
         }}
       >
-        {images.map((img, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <motion.img
-              src={img.src}
-              alt={img.label}
+        <AnimatePresence mode="wait">
+          {visibleImages.map((img, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, rotateY: 180, scale: 0.8 }}
+              animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+              exit={{ opacity: 0, rotateY: -180, scale: 0.8 }}
+              transition={{ duration: 1.5 }}
               style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "relative",
                 width: "100%",
-                borderRadius: "20px",
-                boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
-                cursor: "pointer",
-                border: `4px solid ${borderColors[index % borderColors.length]}`,
+                height: "250px",
+                perspective: "1000px",
               }}
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              onClick={() => setCurrentIndex(index)}
-            />
-          </motion.div>
-        ))}
-      </Box>
-
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          gap: 2,
-          mt: 4,
-        }}
-      >
-        {images.map((_, index) => (
-          <motion.div
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            style={{
-              width: "12px",
-              height: "12px",
-              borderRadius: "50%",
-              backgroundColor: index === currentIndex ? "#6A5ACD" : "#D3D3D3",
-              cursor: "pointer",
-            }}
-            whileHover={{ scale: 1.5, rotate: 360 }}
-          />
-        ))}
+            >
+              <motion.img
+                src={img.src}
+                alt={img.label}
+                whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)" }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "20px",
+                  boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)",
+                  cursor: "pointer",
+                  objectFit: "cover",
+                }}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </Box>
     </Box>
   );

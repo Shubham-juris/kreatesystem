@@ -188,30 +188,30 @@ function Navbar(props) {
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/businessheader"
+                  to="/digitalmarketing"
                   onClick={handleCloseServices}
                 >
                   Digital Marketing
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/businessheader"
+                  to="/graphicdesign"
                   onClick={handleCloseServices}
-                  sx={{ color: "#D4AF37" }}
+                  
                 >
                   Graphic Design
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/businessheader"
+                  to="/UiUxDesign"
                   onClick={handleCloseServices}
-                  sx={{ color: "#90EE90", fontWeight: "bold" }}
+                 
                 >
                   UI/UX Design
                 </MenuItem>
                 <MenuItem
                   component={Link}
-                  to="/businessheader"
+                  to="/webdevelopement"
                   onClick={handleCloseServices}
                 >
                   Web Development

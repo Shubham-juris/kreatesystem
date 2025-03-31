@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
-import WebImage from "../../assets/Appimg.png";
+import WebImage from "../../assets/DigitalMarketingImg/img5.jpg";
+
 
 const WelcomeSection = () => {
   const theme = useTheme();

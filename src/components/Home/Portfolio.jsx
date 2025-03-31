@@ -5,8 +5,15 @@ import SocialImage from "../../assets/socialimg.png";
 import MarketingImage from "../../assets/Marketingimg.png";
 import SupportImage from "../../assets/Supportimg.png";
 import CRMImage from "../../assets/webimg.png";
+import ExpertTeamImg from "../../assets/DigitalMarketingImg/Img1.jpg";
+import InnovationImg  from "../../assets/DigitalMarketingImg/Img2.jpg";
+import  VersatilityImg from "../../assets/DigitalMarketingImg/img3.jpg";
+import ConsistencyImg from "../../assets/DigitalMarketingImg/img4.jpg";
+import QualityImg from "../../assets/DigitalMarketingImg/Img2.jpg";
+import TailoredOfferingsImg from "../../assets/DigitalMarketingImg/img5.jpg";
 
-const images = [SocialImage, MarketingImage, SupportImage, CRMImage];
+
+const images = [SocialImage,ExpertTeamImg,TailoredOfferingsImg,InnovationImg, MarketingImage,QualityImg,VersatilityImg, SupportImage,ConsistencyImg, CRMImage,VersatilityImg];
 
 const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
