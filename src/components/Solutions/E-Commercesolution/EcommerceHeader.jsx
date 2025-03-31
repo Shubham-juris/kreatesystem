@@ -15,7 +15,7 @@ import CaseStudiesImg from "../../../assets/SolutionImg/CloudServices.png";
 import virtualShoppingImage from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 import DynamicPricingStrategiesImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
 import PersonalizedProductImg from "../../../assets/SolutionImg/CloudServices.png";
-import CustomizableCheckoutProcessesImg from "../../../assets/SolutionImg/img.jpg";
+import ProcessesImg from "../../../assets/SolutionImg/img.jpg";
 import bgImage from "../../../assets/Bg.png";
 
 const services = [
@@ -45,7 +45,7 @@ const services = [
   },
   {
     title: "Customizable Checkout Processes",
-    image: CustomizableCheckoutProcessesImg,
+    image: ProcessesImg,
     description:
       "Create a flexible checkout process that allows customers to choose their preferred payment methods, shipping options, and delivery dates, providing a tailored experience that meets their individual needs.",
   },
