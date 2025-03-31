@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import SocialImage from "../../assets/socialimg.png";
 import MarketingImage from "../../assets/Marketingimg.png";
@@ -27,28 +27,24 @@ const images = [
 
 const WorkWithUs = () => {
   const [startIndex, setStartIndex] = useState(0);
+  const isSmallScreen = useMediaQuery("(max-width: 600px)");
+  const isMediumScreen = useMediaQuery("(max-width: 960px)");
 
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % images.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
-  const visibleImages = [
-    images[startIndex],
-    images[(startIndex + 1) % images.length],
-    images[(startIndex + 2) % images.length],
-    images[(startIndex + 3) % images.length],
-  ];
+  const visibleImages = images.slice(startIndex, startIndex + (isSmallScreen ? 1 : isMediumScreen ? 2 : 4));
 
   return (
     <Box
       sx={{
         textAlign: "center",
         bgcolor: "#f9f9f9",
-        p: 4,
+        p: { xs: 2, sm: 3, md: 4 },
         width: "100%",
         maxWidth: "1400px",
         margin: "auto",
@@ -56,17 +52,20 @@ const WorkWithUs = () => {
         boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
         overflow: "hidden",
         position: "relative",
-        mt: 5,
+        mt: { xs: 2, sm: 3, md: 5 },
       }}
     >
-      <Typography variant="h4" sx={{ fontWeight: "bold", color: "#6A5ACD", mb: 3 }}>
+      <Typography
+        variant={isSmallScreen ? "h5" : "h4"}
+        sx={{ fontWeight: "bold", color: "#6A5ACD", mb: 3 }}
+      >
         Work With Us
       </Typography>
 
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: `repeat(${isSmallScreen ? 1 : isMediumScreen ? 2 : 4}, 1fr)`,
           gap: 3,
           justifyContent: "center",
           alignItems: "center",
@@ -86,7 +85,7 @@ const WorkWithUs = () => {
                 justifyContent: "center",
                 position: "relative",
                 width: "100%",
-                height: "250px",
+                height: isSmallScreen ? "180px" : "250px",
                 perspective: "1000px",
               }}
             >
