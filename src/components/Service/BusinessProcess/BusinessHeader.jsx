@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 // Import images
 import bgImage from "../../../assets/Bg.png";
-import CustomizedServiceImg from "../../../assets/Solution Img/img.jpg";
-import DedicatedTeamImg from "../../../assets/Solution Img/CloudServices.png";
-import ProcessEnhancementImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
-import IndustryInsightImg from "../../../assets/Solution Img/DevelopmentImg.jpg";
-import ConsistentDeliveryImg from "../../../assets/Solution Img/CloudServices.png";
-import QualityAssuranceImg from "../../../assets/Solution Img/img.jpg";
-import TailoredOfferingsImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
+import CustomizedServiceImg from "../../../assets/SolutionImg/img.jpg";
+import DedicatedTeamImg from "../../../assets/SolutionImg/CloudServices.png";
+import ProcessEnhancementImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
+import IndustryInsightImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
+import ConsistentDeliveryImg from "../../../assets/SolutionImg/CloudServices.png";
+import QualityAssuranceImg from "../../../assets/SolutionImg/img.jpg";
+import TailoredOfferingsImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 
 const BusinessHeader = () => {
   const theme = useTheme();

@@ -9,7 +9,7 @@ import ProcessEnhancementImg from "../../../assets/service/office.jpg";
 import IndustryInsightImg from "../../../assets/service/working.jpg";
 import ConsistentDeliveryImg from "../../../assets/service/pexels.jpg";
 // import QualityAssuranceImg from "../../../assets/Bg.png";
-import TailoredOfferingsImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
+import TailoredOfferingsImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
  
 const ConsultingService = () => {
     const servicesAbout = [ 

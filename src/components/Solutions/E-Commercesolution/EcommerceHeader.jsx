@@ -9,13 +9,13 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import BuildingOptimizationImg from "../../../assets/Solution Img/DevelopmentImg.jpg";
-import KeyFeaturesImg from "../../../assets/Solution Img/ITConsultingImg.jpg";
-import CaseStudiesImg from "../../../assets/Solution Img/CloudServices.png";
-import virtualShoppingImage from "../../../assets/Solution Img/ITConsultingImg.jpg";
-import DynamicPricingStrategiesImg from "../../../assets/Solution Img/DevelopmentImg.jpg";
-import PersonalizedProductImg from "../../../assets/Solution Img/CloudServices.png";
-import CustomizableCheckoutProcessesImg from "../../../assets/Solution Img/img.jpg";
+import BuildingOptimizationImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
+import KeyFeaturesImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
+import CaseStudiesImg from "../../../assets/SolutionImg/CloudServices.png";
+import virtualShoppingImage from "../../../assets/SolutionImg/ITConsultingImg.jpg";
+import DynamicPricingStrategiesImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
+import PersonalizedProductImg from "../../../assets/SolutionImg/CloudServices.png";
+import CustomizableCheckoutProcessesImg from "../../../assets/SolutionImg/img.jpg";
 import bgImage from "../../../assets/Bg.png";
 
 const services = [

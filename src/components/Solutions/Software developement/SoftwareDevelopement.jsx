@@ -1,10 +1,10 @@
 import { Container, Typography, Box, List, ListItem, ListItemText, Grid, Card, CardContent, Avatar, Button, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { useTheme } from "@mui/system";
-import ITConsultingImg from "../../../assets/Solution Img/SoftwareDevelopementImg/img1.jpg";
-import CloudServicesImg from "../../../assets/Solution Img/SoftwareDevelopementImg/img2.jpg";
-import CustomSoftwareDevelopmentImg from "../../../assets/Solution Img/SoftwareDevelopementImg/img3.jpg";
-import SoftwareDevelopmentImg from "../../../assets/Solution Img/SoftwareDevelopementImg/img4.jpg";
+import ITConsultingImg from "../../../assets/SolutionImg/SoftwareDevelopementImg/img1.jpg";
+import CloudServicesImg from "../../../assets/SolutionImg/SoftwareDevelopementImg/img2.jpg";
+import CustomSoftwareDevelopmentImg from "../../../assets/SolutionImg/SoftwareDevelopementImg/img3.jpg";
+import SoftwareDevelopmentImg from "../../../assets/SolutionImg/SoftwareDevelopementImg/img4.jpg";
 import HeaderImg from "../../../assets/Bg.png";
 const services = [
   {

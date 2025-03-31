@@ -40,7 +40,7 @@ const AppRoutes = () => {
         <Route path="/UiUxDesign" element={<UiUxDesign />} />
         <Route path="/webdevelopement" element={<WebDevelopement />} />
       </Routes>
-    </>
+    </>  
   );
 };
 
