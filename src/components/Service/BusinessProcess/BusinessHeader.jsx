@@ -10,7 +10,7 @@ import ProcessEnhancementImg from "../../../assets/SolutionImg/ITConsultingImg.j
 import IndustryInsightImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
 import ConsistentDeliveryImg from "../../../assets/SolutionImg/CloudServices.png";
 import QualityAssuranceImg from "../../../assets/SolutionImg/img.jpg";
-import TailoredOfferingsImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
+import TailoredOfferingsImg from "../../../assets/SolutionImg/SoftwareDevelopementImg/img1.jpg";
 
 const BusinessHeader = () => {
   const theme = useTheme();
