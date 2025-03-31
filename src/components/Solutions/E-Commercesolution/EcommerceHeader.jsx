@@ -53,7 +53,7 @@ const services = [
     title: "Dynamic Pricing Strategies",
     image: DynamicPricingStrategiesImg,
     description:
-      "Implement dynamic pricing algorithms that adjust product prices in real-time based on factors such as demand, inventory levels, and competitor pricing, optimizing revenue and maximizing profit margins.",
+      "Implement dynamic pricing algorithms that adjust product prices in realtime based on factors such as demand, inventory levels, and competitor pricing, optimizing revenue and maximizing profit margins.",
   },
   {
     title: "Interactive Virtual Shopping Experiences",
