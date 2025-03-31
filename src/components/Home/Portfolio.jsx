@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, IconButton, useMediaQuery } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import SocialImage from "../../assets/socialimg.png";
+import SocialImage from "../../assets/DigitalMarketingImg/Img2.jpg";
 import MarketingImage from "../../assets/Marketingimg.png";
 import SupportImage from "../../assets/Supportimg.png";
 import CRMImage from "../../assets/webimg.png";
