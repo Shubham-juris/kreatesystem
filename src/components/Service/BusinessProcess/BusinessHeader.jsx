@@ -9,7 +9,7 @@ import DedicatedTeamImg from "../../../assets/SolutionImg/CloudServices.png";
 import ProcessEnhancementImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 import IndustryInsightImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
 import ConsistentDeliveryImg from "../../../assets/SolutionImg/CloudServices.png";
-import QualityAssuranceImg from "../../../assets/SolutionImg/img.jpg";
+import QualityAssuranceImg from "../../../assets/SolutionImg/SoftwareDevelopementImg/img2.jpg";
 import TailoredOfferingsImg from "../../../assets/SolutionImg/SoftwareDevelopementImg/img1.jpg";
 
 const BusinessHeader = () => {
