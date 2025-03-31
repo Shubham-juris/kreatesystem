@@ -4,7 +4,7 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import SocialImage from "../../assets/DigitalMarketingImg/Img2.jpg";
 import MarketingImage from "../../assets/Marketingimg.png";
 import SupportImage from "../../assets/Supportimg.png";
-import CRMImage from "../../assets/webimg.png";
+import CRMImage from "../../assets/Supportimg.png";
 import ExpertTeamImg from "../../assets/DigitalMarketingImg/Img1.jpg";
 import InnovationImg from "../../assets/DigitalMarketingImg/Img2.jpg";
 import VersatilityImg from "../../assets/DigitalMarketingImg/img3.jpg";
