@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
-import SocialImage from "../../assets/socialimg.png";
+import SocialImage from "../../assets/DigitalMarketingImg/img4.jpg";
 import MarketingImage from "../../assets/Marketingimg.png";
 import SupportImage from "../../assets/Supportimg.png";
 import CRMImage from "../../assets/webimg.png";
