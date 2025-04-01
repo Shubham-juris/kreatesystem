@@ -25,7 +25,7 @@ const BusinessHeader = () => {
     },
     {
       title: "Dedicated Team",
-      description:
+      description:                                                                                           
         "Our team of seasoned professionals is committed to providing exceptional BPO services, ensuring that your business functions run smoothly and effectively. With a focus on excellence and efficiency, we deliver reliable outsourcing solutions tailored to your specific needs.",
       image: DedicatedTeamImg,
     },

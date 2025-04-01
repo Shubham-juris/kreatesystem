@@ -13,8 +13,8 @@ import BuildingOptimizationImg from "../../../assets/SolutionImg/DevelopmentImg.
 import KeyFeaturesImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 import CaseStudiesImg from "../../../assets/SolutionImg/CloudServices.png";
 import virtualShoppingImage from "../../../assets/SolutionImg/ITConsultingImg.jpg";
-import DynamicPricingStrategiesImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
-import PersonalizedProductImg from "../../../assets/SolutionImg/CloudServices.png";
+import DynamicPricingStrategiesImg from "../../../assets/uiuxDesignimg/img1.jpg";
+import PersonalizedProductImg from "../../../assets/uiuxDesignimg/img4.jpg";
 import ProcessesImg from "../../../assets/service/collage.jpg";
 import bgImage from "../../../assets/Bg.png";
 
@@ -119,54 +119,78 @@ const Ecommerceheader = () => {
       </Box>
 
       {/* Intro Section */}
-      <Container maxWidth="lg" sx={{ textAlign: "center", py: { xs: 4, md: 6 } }}>
-        <Box display="flex" alignItems="center" justifyContent="center" mb={3}>
-          <Divider
-            sx={{
-              flexGrow: 1,
-              bgcolor: "#A5A585",
-              height: 2,
-              mx: { xs: 1, sm: 2 },
-            }}
-          />
-          <Typography
-            variant={isSmallScreen ? "h5" : "h4"}
-            fontFamily="'Times New Roman', serif"
-            textTransform="uppercase"
-            sx={{
-              fontWeight: 500,
-              color: "#A5A585",
-              whiteSpace: "nowrap",
-              px: 2,
-            }}
-          >
-            Innovative Custom Software Solutions
-          </Typography>
-          <Divider
-            sx={{
-              flexGrow: 1,
-              bgcolor: "#A5A585",
-              height: 2,
-              mx: { xs: 1, sm: 2 },
-            }}
-          />
-        </Box>
-        <Typography
-          variant="body1"
-          color="text.secondary"
-          sx={{
-            maxWidth: { xs: "90%", sm: "80%", md: "70%" },
-            mx: "auto",
-            lineHeight: 1.8,
-            fontSize: { xs: "0.95rem", sm: "1rem" },
-          }}
-        >
-          At Kreate Solution Systems, we understand the pivotal role e-commerce
-          plays in modern businesses' success. We believe that a well-crafted
-          online presence can significantly impact a company’s growth and
-          profitability.
-        </Typography>
-      </Container>
+      <Container 
+  maxWidth="lg" 
+  sx={{ 
+    textAlign: "center", 
+    py: { xs: 2, sm: 4, md: 6 }, 
+    px: { xs: 1, sm: 2, md: 3 }, 
+  }}
+>
+  <Box 
+    display="flex" 
+    alignItems="center" 
+    justifyContent="center" 
+    mb={{ xs: 2, sm: 3, md: 4 }} 
+    sx={{
+      flexDirection: { xs: "column", sm: "row" }, 
+      gap: { xs: 1, sm: 2, md: 3 }, 
+      width: "100%", 
+      px: { xs: 0, sm: 1, md: 2 }, 
+    }}
+  >
+    <Divider
+      sx={{
+        flexGrow: { xs: 0, sm: 1 }, 
+        bgcolor: "#A5A585",
+        height: 2,
+        width: { xs: "40%", sm: "auto" }, 
+        mx: { xs: 0, sm: 1, md: 2 }, 
+      }}
+    />
+    <Typography
+      variant={isSmallScreen ? "h6" : isMediumScreen ? "h5" : "h4"} 
+      fontFamily="'Times New Roman', serif"
+      textTransform="uppercase"
+      sx={{
+        fontWeight: 500,
+        color: "#A5A585",
+        whiteSpace: "nowrap",
+        px: { xs: 0, sm: 1, md: 2 }, 
+        fontSize: { xs: "0.875rem", sm: "1rem", md: "1.75rem" }, // Desktop (md) ke liye bada font size
+        lineHeight: 1.2, 
+      }}
+    >
+      Innovative Custom Software Solutions
+    </Typography>
+    <Divider
+      sx={{
+        flexGrow: { xs: 0, sm: 1 }, 
+        bgcolor: "#A5A585",
+        height: 2,
+        width: { xs: "40%", sm: "auto" }, 
+        mx: { xs: 0, sm: 1, md: 2 }, 
+      }}
+    />
+  </Box>
+  <Typography
+    variant="body1"
+    color="text.secondary"
+    sx={{
+      maxWidth: { xs: "100%", sm: "90%", md: "70%" }, 
+      mx: "auto",
+      lineHeight: 1.6, 
+      fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" }, 
+      px: { xs: 1, sm: 0 }, 
+      mt: { xs: 2, sm: 3 }, 
+    }}
+  >
+    At Kreate Solution Systems, we understand the pivotal role e-commerce
+    plays in modern businesses' success. We believe that a well-crafted
+    online presence can significantly impact a company’s growth and
+    profitability.
+  </Typography>
+</Container>
 
       {/* Services Section */}
       <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
@@ -230,7 +254,8 @@ const Ecommerceheader = () => {
                 sx={{
                   width: "100%",
                   maxWidth: { xs: "300px", sm: "400px", md: "500px" },
-                  height: "auto",
+                  height: { xs: "200px", sm: "250px", md: "300px" },
+                  objectFit: "cover",
                   borderRadius: "12px",
                   boxShadow: "0px 6px 20px rgba(0, 0, 0, 0.15)",
                   display: "block",
@@ -314,6 +339,9 @@ const Ecommerceheader = () => {
                   borderRadius: "12px",
                   boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
                   transition: "box-shadow 0.3s ease",
+                  height: "100%", // Ensure consistent height for all cards
+                  display: "flex",
+                  flexDirection: "column",
                   "&:hover": {
                     boxShadow: "0px 8px 25px rgba(0, 0, 0, 0.15)",
                   },
@@ -349,6 +377,7 @@ const Ecommerceheader = () => {
                     lineHeight: 1.7,
                     fontSize: { xs: "0.85rem", sm: "0.95rem" },
                     px: { xs: 1, sm: 2 },
+                    flexGrow: 1, // Allow description to take available space
                   }}
                 >
                   {service.description}
