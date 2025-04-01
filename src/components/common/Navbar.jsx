@@ -197,7 +197,6 @@ function Navbar(props) {
                   component={Link}
                   to="/graphicdesign"
                   onClick={handleCloseServices}
-                  
                 >
                   Graphic Design
                 </MenuItem>
@@ -205,7 +204,6 @@ function Navbar(props) {
                   component={Link}
                   to="/UiUxDesign"
                   onClick={handleCloseServices}
-                 
                 >
                   UI/UX Design
                 </MenuItem>

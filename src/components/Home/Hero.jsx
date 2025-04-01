@@ -1,8 +1,11 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import backgroundImage from "../../assets/Bg.png";
 
 const Hero = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       sx={{
@@ -20,11 +23,17 @@ const Hero = () => {
         px: 2,
       }}
     >
-      <Box sx={{ maxWidth: "800px" }}>
-        <Typography variant="h3" fontWeight="bold">
+      <Box sx={{ maxWidth: "800px", px: isSmallScreen ? 1 : 2 }}>
+        <Typography
+          variant={isSmallScreen ? "h4" : "h3"}
+          fontWeight="bold"
+        >
           Professional Tech For Your Business
         </Typography>
-        <Typography variant="h6" mt={2}>
+        <Typography
+          variant={isSmallScreen ? "body1" : "h6"}
+          mt={2}
+        >
           At <strong>Kreate Systems</strong>, we specialize in Web Development, Graphic Designing, and Marketing.
         </Typography>
       </Box>
