@@ -1,29 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Box, Typography, IconButton, useMediaQuery } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-// import SocialImage from "../../assets/DigitalMarketingImg/Img2.jpg";
 import MarketingImage from "../../assets/Marketingimg.png";
-// import SupportImage from "../../assets/DigitalMarketingImg/Img2.jpg";
-import CRMImage from "../../assets/DigitalMarketingImg/img4.jpg";
 import ExpertTeamImg from "../../assets/DigitalMarketingImg/Img1.jpg";
-// import InnovationImg from "../../assets/DigitalMarketingImg/Img2.jpg";
-// import VersatilityImg from "../../assets/DigitalMarketingImg/img3.jpg";
-// import ConsistencyImg from "../../assets/DigitalMarketingImg/img4.jpg";
-import QualityImg from "../../assets/DigitalMarketingImg/Img2.jpg";
 import TailoredOfferingsImg from "../../assets/DigitalMarketingImg/img5.jpg";
 
 const images = [
-  // SocialImage,
   ExpertTeamImg,
   TailoredOfferingsImg,
-  // InnovationImg,
   MarketingImage,
-  QualityImg,
-  // VersatilityImg,
-  // SupportImage,
-  // ConsistencyImg,
-  CRMImage,
-  // VersatilityImg,
 ];
 
 const Portfolio = () => {
