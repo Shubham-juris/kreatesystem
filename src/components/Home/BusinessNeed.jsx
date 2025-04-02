@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
-import WebImage from "../../assets/DigitalMarketingImg/Img3.jpg";
+import WebImage from "../../assets/GraphicDesign/img1.jpg";
 
 const BusinessNeed = () => {
   const theme = useTheme();
