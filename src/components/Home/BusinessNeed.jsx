@@ -9,17 +9,18 @@ const BusinessNeed = () => {
 
   return (
     <Box sx={{ p: { xs: 1, sm: 2, md: 4 }, textAlign: "center", bgcolor: "#fff" }}>
-      <Typography
-        variant={isSmallScreen ? "h6" : isMediumScreen ? "h5" : "h5"}
-        sx={{
-          fontWeight: "bold",
-          color: "#8B8B5E",
-          mb: { xs: 1, sm: 2 },
-          textAlign: "center",
-        }}
-      >
-        You Need Us
-      </Typography>
+     <Box
+             sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}
+           >
+             <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+             <Typography
+               variant="h4"
+               sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2, textAlign: "center" }}
+             >
+                YOU NEED US
+             </Typography>
+             <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+           </Box>
       <Box
         sx={{
           display: "flex",

@@ -9,8 +9,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import BuildingOptimizationImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
-import KeyFeaturesImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
+import BuildingOptimizationImg from "../../../assets/DigitalMarketingImg/img1.jpg";
+import KeyFeaturesImg from "../../../assets/WebDevelopementimg/img2.jpg";
 import CaseStudiesImg from "../../../assets/SolutionImg/CloudServices.png";
 import virtualShoppingImage from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 import DynamicPricingStrategiesImg from "../../../assets/uiuxDesignimg/img1.jpg";

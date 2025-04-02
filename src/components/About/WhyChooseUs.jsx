@@ -27,9 +27,18 @@ const WhyChooseUs = () => {
 
   return (
     <Box sx={{ textAlign: "center", padding: "50px 20px" }}>
-      <Typography variant="h4" sx={{ fontWeight: "bold", mb: 4 }}>
-        WHY CHOOSE US?
-      </Typography>
+      <Box
+        sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}
+      >
+        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+        <Typography
+          variant="h4"
+          sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2, textAlign: "center" }}
+        >
+         WHY CHOOSE US?
+        </Typography>
+        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+      </Box>
       <Grid container spacing={4} justifyContent="center">
         {reasons.map((reason, index) => (
           <Grid item xs={12} md={5} key={index}>

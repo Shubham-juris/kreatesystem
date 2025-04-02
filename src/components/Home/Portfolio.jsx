@@ -40,13 +40,18 @@ const Portfolio = () => {
 
   return (
     <Box sx={{ textAlign: "center", bgcolor: "#fff", p: 4, position: "relative" }}>
-      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 3 }}>
-        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-        <Typography variant="h5" sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2 }}>
-          PORTFOLIO
-        </Typography>
-        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-      </Box>
+      <Box
+              sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}
+            >
+              <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+              <Typography
+                variant="h4"
+                sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2, textAlign: "center" }}
+              >
+                PORTFOLIO
+              </Typography>
+              <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+            </Box>
 
       <Box sx={{
         display: "flex",
