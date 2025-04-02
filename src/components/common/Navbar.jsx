@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // useEffect ko import kiya
 import {AppBar,Box,CssBaseline,Divider,Drawer,IconButton,List,ListItem,ListItemButton,ListItemText,Toolbar,Typography,Button,Menu,MenuItem,useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { useTheme } from "@mui/material/styles";
 import { keyframes } from "@emotion/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom"; // useLocation ko import kiya
 
 // Constants
 const DRAWER_WIDTH = 245;
@@ -56,7 +56,7 @@ const menuStyle = {
     minWidth: "220px",
   },
   "& .MuiMenuItem-root": {
-    justifyContent: "flex-start", // Left-align menu items
+    justifyContent: "flex-start",
   },
 };
 
@@ -76,9 +76,21 @@ function Navbar({ window }) {
   const isSolutionsOpen = Boolean(anchorElSolutions);
   const isCaseStudiesOpen = Boolean(anchorElCaseStudies);
 
+  // Location Hook for Route Change Detection
+  const location = useLocation();
+
+  // Effect to Close Menus on Route Change
+  useEffect(() => {
+    // Jab bhi location (route) change hota hai, saare dropdowns aur drawer close ho jayenge
+    setAnchorElServices(null);
+    setAnchorElSolutions(null);
+    setAnchorElCaseStudies(null);
+    setMobileOpen(false); // Optional: Drawer bhi close karna chahte ho to
+  }, [location]); // Dependency array mein location daala, taaki har route change pe trigger ho
+
   // Event Handlers
   const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
-  
+
   const handleMenuOpen = (event, type) => {
     switch (type) {
       case "SERVICES":
