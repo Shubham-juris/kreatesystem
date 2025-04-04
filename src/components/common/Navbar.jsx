@@ -14,10 +14,10 @@ const DRAWER_WIDTH = 245;
 const NAV_ITEMS = [
   "Home",
   "About",
-  "CASE STUDIES",
+  "SERVICES",
   "SOLUTIONS",
   "Contact Us",
-  "SERVICES",
+  "CASE STUDIES",
   "Careers",
 ];
 
