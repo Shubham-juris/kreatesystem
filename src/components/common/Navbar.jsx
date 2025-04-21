@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
-  AppBar,  Box,  CssBaseline,  Divider,  Drawer,  IconButton,  List,  ListItem,  ListItemButton,
-  ListItemText,  Toolbar,  Typography,  Button,  Menu,  MenuItem,  useMediaQuery,  Container,
+  AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton,
+  ListItemText, Toolbar, Typography, Button, Menu, MenuItem, useMediaQuery, Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -26,38 +26,6 @@ const slideDown = keyframes`
   from { transform: translateY(-100%); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 `;
-
-const navButtonStyle = {
-  color: "#283878",
-  fontSize: "1rem",
-  fontWeight: "bold",
-  mx: 1,
-  textTransform: "uppercase",
-  "&:hover": {
-    color: "#ff6b6b",
-    "&::after": {
-      content: '""',
-      position: "absolute",
-      width: "100%",
-      height: "3px",
-      backgroundColor: "#ff6b6b",
-      bottom: "-6px",
-      left: 0,
-    },
-  },
-};
-
-const menuStyle = {
-  "& .MuiPaper-root": {
-    backgroundColor: "#111",
-    color: "#fff",
-    borderRadius: "6px",
-    minWidth: "220px",
-  },
-  "& .MuiMenuItem-root": {
-    justifyContent: "flex-start",
-  },
-};
 
 function Navbar({ window }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -114,6 +82,27 @@ function Navbar({ window }) {
     }
   };
 
+  const navButtonStyle = (path) => ({
+    color: location.pathname === path ? "#ff6b6b" : "#283878",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    mx: 1,
+    textTransform: "uppercase",
+    borderBottom: location.pathname === path ? "3px solid #ff6b6b" : "none",
+  });
+
+  const menuStyle = {
+    "& .MuiPaper-root": {
+      backgroundColor: "#111",
+      color: "#fff",
+      borderRadius: "6px",
+      minWidth: "220px",
+    },
+    "& .MuiMenuItem-root": {
+      justifyContent: "flex-start",
+    },
+  };
+
   const drawerContent = (
     <Box sx={{ textAlign: "left", p: 2 }}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
@@ -168,40 +157,22 @@ function Navbar({ window }) {
                 >
                   {item === "SERVICES" && (
                     <>
-                      <MenuItem component={Link} to="/businessheader" onClick={() => handleMenuClose(item)}>
-                        Business Process
-                      </MenuItem>
-                      <MenuItem component={Link} to="/consultingservices" onClick={() => handleMenuClose(item)}>
-                        Consulting Service
-                      </MenuItem>
-                      <MenuItem component={Link} to="/digitalmarketing" onClick={() => handleMenuClose(item)}>
-                        Digital Marketing
-                      </MenuItem>
-                      <MenuItem component={Link} to="/graphicdesign" onClick={() => handleMenuClose(item)}>
-                        Graphic Design
-                      </MenuItem>
-                      <MenuItem component={Link} to="/UiUxDesign" onClick={() => handleMenuClose(item)}>
-                        UI/UX Design
-                      </MenuItem>
-                      <MenuItem component={Link} to="/webdevelopement" onClick={() => handleMenuClose(item)}>
-                        Web Development
-                      </MenuItem>
+                      <MenuItem component={Link} to="/businessheader">Business Process</MenuItem>
+                      <MenuItem component={Link} to="/consultingservices">Consulting Service</MenuItem>
+                      <MenuItem component={Link} to="/digitalmarketing">Digital Marketing</MenuItem>
+                      <MenuItem component={Link} to="/graphicdesign">Graphic Design</MenuItem>
+                      <MenuItem component={Link} to="/UiUxDesign">UI/UX Design</MenuItem>
+                      <MenuItem component={Link} to="/webdevelopement">Web Development</MenuItem>
                     </>
                   )}
                   {item === "SOLUTIONS" && (
                     <>
-                      <MenuItem component={Link} to="/ecommerceheader" onClick={() => handleMenuClose(item)}>
-                        E-commerce Solutions
-                      </MenuItem>
-                      <MenuItem component={Link} to="/softwaresolutionssection" onClick={() => handleMenuClose(item)}>
-                        Software Development
-                      </MenuItem>
+                      <MenuItem component={Link} to="/ecommerceheader">E-commerce Solutions</MenuItem>
+                      <MenuItem component={Link} to="/softwaresolutionssection">Software Development</MenuItem>
                     </>
                   )}
                   {item === "CASE STUDIES" && (
-                    <MenuItem component={Link} to="/" onClick={() => handleMenuClose(item)}>
-                      IT Cases
-                    </MenuItem>
+                    <MenuItem component={Link} to="/">IT Cases</MenuItem>
                   )}
                 </Menu>
               </>
@@ -254,8 +225,8 @@ function Navbar({ window }) {
                 {NAV_ITEMS.map((item) =>
                   ["SERVICES", "SOLUTIONS", "CASE STUDIES"].includes(item) ? (
                     <Box key={item}>
-                      <Button onClick={(e) => handleMenuOpen(e, item)} sx={navButtonStyle}>
-                        {item}{" "}
+                      <Button onClick={(e) => handleMenuOpen(e, item)} sx={navButtonStyle("")}>
+                        {item}
                         {(item === "SERVICES" && isServicesOpen) ||
                         (item === "SOLUTIONS" && isSolutionsOpen) ||
                         (item === "CASE STUDIES" && isCaseStudiesOpen) ? (
@@ -308,7 +279,7 @@ function Navbar({ window }) {
                       key={item}
                       component={Link}
                       to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
-                      sx={navButtonStyle}
+                      sx={navButtonStyle(`/${item.toLowerCase().replace(/\s+/g, "")}`)}
                     >
                       {item}
                     </Button>
@@ -319,23 +290,19 @@ function Navbar({ window }) {
           </Toolbar>
         </Container>
       </AppBar>
-
       <Box component="nav">
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
+          ModalProps={{ keepMounted: true }}
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: DRAWER_WIDTH,
-              backgroundColor: "#fff",
-              color: "#000",
+              backgroundColor: "#f5f5f5",
             },
           }}
         >
@@ -347,4 +314,3 @@ function Navbar({ window }) {
 }
 
 export default Navbar;
- 
