@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Typography, Container, Grid, List, ListItem, ListItemText, Divider, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 
-// Import images
 import bgImage from "../../../assets/Bg.png";
 import CustomizedServiceImg from "../../../assets/SolutionImg/CloudServices.png";
 import DedicatedTeamImg from "../../../assets/SolutionImg/CloudServices.png";
@@ -85,12 +84,12 @@ const BusinessHeader = () => {
 
   return (
     <>
-      {/* Business Header Section */}
+      
       <Box
         sx={{
           position: "relative",
           width: "100%",
-          minHeight: "250px",
+          minHeight: "300px",
           height: isSmallScreen ? "40vh" : "40vh",
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
@@ -103,7 +102,7 @@ const BusinessHeader = () => {
           px: 2,
         }}
       >
-        {/* Dark Overlay */}
+       
         <Box
           sx={{
             position: "absolute",
@@ -113,7 +112,7 @@ const BusinessHeader = () => {
           }}
         />
 
-        {/* Animated Text */}
+      
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -134,7 +133,7 @@ const BusinessHeader = () => {
         </motion.div>
       </Box>
 
-      {/* About Business Section */}
+     
       <Container sx={{ py: 5 }}>
         {servicesAbout.map((service, index) => (
           <Grid
@@ -148,7 +147,7 @@ const BusinessHeader = () => {
               <img
                 src={service.image}
                 alt={service.title}
-                style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+                style={{ width: "100%", height: "350px", borderRadius: "8px" }}
               />
             </Grid>
 
@@ -163,8 +162,6 @@ const BusinessHeader = () => {
           </Grid>
         ))}
       </Container>
-
-      {/* Tailored Offerings Section */}
       <Box
         sx={{
           display: "flex",
@@ -180,7 +177,6 @@ const BusinessHeader = () => {
           my: 4,
         }}
       >
-        {/* Left Section: Text Content */}
         <Box
           sx={{
             flex: 1,
@@ -262,7 +258,6 @@ const BusinessHeader = () => {
           </List>
         </Box>
 
-        {/* Right Section: Image */}
         <Box
           sx={{
             flex: 1,

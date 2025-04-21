@@ -1,5 +1,11 @@
 import React from "react";
-import { Box, Container, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import WebImage from "../../assets/GraphicDesign/img1.jpg";
 
 const BusinessNeed = () => {
@@ -8,19 +14,30 @@ const BusinessNeed = () => {
 
   return (
     <Box sx={{ bgcolor: "#fff", py: 4 }}>
-      <Container>
-        <Box
-          sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          mb: 2,
+        }}
+      >
+        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            color: "#8B8B5E",
+            mx: 2,
+            textAlign: "center",
+            py: 4,
+          }}
         >
-          <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-          <Typography
-            variant="h4"
-            sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2, textAlign: "center" ,py: 4}}
-          >
-            YOU NEED US
-          </Typography>
-          <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-        </Box>
+          YOU NEED US
+        </Typography>
+        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+      </Box>
+      <Container>
         <Box
           sx={{
             display: "flex",
@@ -48,10 +65,11 @@ const BusinessNeed = () => {
                 px: { xs: 1, sm: 0 },
               }}
             >
-              At Kreate Systems, we understand that businesses are constantly seeking
-              solutions that deliver tangible benefits and drive success. That's why we're
-              committed to highlighting the key features and benefits of our services to help
-              you make informed decisions and achieve your goals effectively.
+              At Kreate Systems, we understand that businesses are constantly
+              seeking solutions that deliver tangible benefits and drive
+              success. That's why we're committed to highlighting the key
+              features and benefits of our services to help you make informed
+              decisions and achieve your goals effectively.
             </Typography>
           </Box>
           <Box

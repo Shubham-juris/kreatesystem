@@ -29,7 +29,9 @@ const Portfolio = () => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   const getVisibleImages = () => {
@@ -42,31 +44,31 @@ const Portfolio = () => {
 
   return (
     <Box sx={{ bgcolor: "#fff", py: 4 }}>
-      <Container>
-        <Box
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          mb: 2,
+        }}
+      >
+        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+        <Typography
+          variant="h4"
           sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            mb: 2,
+            fontWeight: "bold",
+            color: "#8B8B5E",
+            mx: 2,
+            py: 3,
+            textAlign: "center",
           }}
         >
-          <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: "bold",
-              color: "#8B8B5E",
-              mx: 2,
-              py: 3,
-              textAlign: "center",
-            }}
-          >
-            PORTFOLIO
-          </Typography>
-          <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-        </Box>
+          PORTFOLIO
+        </Typography>
+        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+      </Box>
 
+      <Container>
         <Box
           sx={{
             display: "flex",
@@ -77,7 +79,10 @@ const Portfolio = () => {
             width: "100%",
           }}
         >
-          <IconButton onClick={handlePrev} sx={{ position: "absolute", left: 10, zIndex: 2 }}>
+          <IconButton
+            onClick={handlePrev}
+            sx={{ position: "absolute", left: 10, zIndex: 2 }}
+          >
             <ArrowBack fontSize="large" />
           </IconButton>
 
@@ -114,7 +119,10 @@ const Portfolio = () => {
             ))}
           </Box>
 
-          <IconButton onClick={handleNext} sx={{ position: "absolute", right: 10, zIndex: 2 }}>
+          <IconButton
+            onClick={handleNext}
+            sx={{ position: "absolute", right: 10, zIndex: 2 }}
+          >
             <ArrowForward fontSize="large" />
           </IconButton>
         </Box>

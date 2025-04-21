@@ -3,13 +3,14 @@ import AboutImage from "../../assets/Bg.png";
 
 const AboutKreateSystem = () => {
   return (
-    <Container sx={{ my: 5 }}>
+    <Container sx={{ py: 5 }}>
       <Typography variant="h4" sx={{ fontWeight: "bold", mb: 3 }}>
         ABOUT KREATE SYSTEMS
       </Typography>
-      <Grid container spacing={3}>
+      
+      <Grid container spacing={3 }>
         <Grid item xs={12} md={6}>
-          <Card sx={{ boxShadow: 3 }}>
+          <Card sx={{ boxShadow: 3 ,py:3}}>
             <CardContent>
               <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                 Our Company

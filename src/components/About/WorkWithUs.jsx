@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, useMediaQuery, Container } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import SocialImage from "../../assets/DigitalMarketingImg/img4.jpg";
 import MarketingImage from "../../assets/Marketingimg.png";
@@ -37,14 +37,12 @@ const WorkWithUs = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Always show 4 images, rotating one by one
   const visibleImages = [];
   for (let i = 0; i < 4; i++) {
     const index = (startIndex + i) % images.length;
     visibleImages.push(images[index]);
   }
 
-  // Advanced animation variants
   const imageVariants = {
     hidden: { opacity: 0, rotateY: 180, scale: 0.8, y: 100, z: -100 },
     visible: { 
@@ -89,11 +87,8 @@ const WorkWithUs = () => {
       sx={{
         textAlign: "center",
         bgcolor: "#f5f5f5",
-        p: { xs: 2, sm: 3, md: 5 },
-        width: "100%",
-        maxWidth: "1400px",
-        margin: "auto",
-        borderRadius: "25px",
+        py: 5,
+        width: "100%",      
         boxShadow: "0 15px 35px rgba(0, 0, 0, 0.2)",
         overflow: "hidden",
         position: "relative",
@@ -101,90 +96,103 @@ const WorkWithUs = () => {
         background: "linear-gradient(135deg, #f9f9f9, #e0e0e0)",
       }}
     >
-     <Box
-             sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}
-           >
-             <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-             <Typography
-               variant="h4"
-               sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2, textAlign: "center" }}
-             >
-               WORK WITH US
-             </Typography>
-             <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-           </Box>
-
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: `repeat(${Math.min(4, isSmallScreen ? 1 : isMediumScreen ? 2 : 4)}, 1fr)`,
-            gap: 4,
-            justifyContent: "center",
-            alignItems: "center",
-            padding: 2,
-          }}
-        >
-          <AnimatePresence mode="wait">
-            {visibleImages.map((img, index) => (
-              <motion.div
-                key={img.label}
-                variants={imageVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                whileHover="hover"
-                whileInView={{ scale: 1.02 }} // Subtle scale on view
-                viewport={{ once: true }}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  position: "relative",
-                  width: "100%",
-                  height: isSmallScreen ? "200px" : isMediumScreen ? "250px" : "300px",
-                  perspective: "2000px",
-                  transformStyle: "preserve-3d",
+      <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mb: 3,
+              }}
+            >
+              <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: "bold",
+                  color: "#8B8B5E",              
+                  textAlign: "center",
+                  py: 4,
+                  mx: { xs: 1, sm: 2 },
                 }}
               >
-                <motion.img
-                  src={img.src}
-                  alt={img.label}
-                  variants={hoverVariants}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "20px",
-                    boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)",
-                    cursor: "pointer",
-                    objectFit: "cover",
-                    border: "3px solid #6A5ACD",
-                    transform: "translateZ(20px)",
-                  }}
-                />
+                 YOU NEED US 
+              </Typography>
+              <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+            </Box>
+
+      <Container>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: `repeat(${Math.min(4, isSmallScreen ? 1 : isMediumScreen ? 2 : 4)}, 1fr)`,
+              gap: 4,
+              justifyContent: "center",
+              alignItems: "center",
+             
+            }}
+          >
+            <AnimatePresence mode="wait">
+              {visibleImages.map((img, index) => (
                 <motion.div
+                  key={img.label}
+                  variants={imageVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  whileHover="hover"
+                  whileInView={{ scale: 1.02 }} 
+                  viewport={{ once: true }}
                   style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    borderRadius: "20px",
-                    background: "rgba(106, 90, 205, 0.1)",
-                    opacity: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    position: "relative",
+                    width: "100%",
+                    height: isSmallScreen ? "200px" : isMediumScreen ? "250px" : "300px",
+                    perspective: "2000px",
+                    transformStyle: "preserve-3d",
                   }}
-                  whileHover={{ opacity: 0.3 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </Box>
-      </motion.div>
+                >
+                  <motion.img
+                    src={img.src}
+                    alt={img.label}
+                    variants={hoverVariants}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "20px",
+                      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)",
+                      cursor: "pointer",
+                      objectFit: "cover",
+                      border: "3px solid #6A5ACD",
+                      transform: "translateZ(20px)",
+                    }}
+                  />
+                  <motion.div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      borderRadius: "20px",
+                      background: "rgba(106, 90, 205, 0.1)",
+                      opacity: 0,
+                    }}
+                    whileHover={{ opacity: 0.3 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </Box>
+        </motion.div>
+      </Container>
     </Box>
   );
 };

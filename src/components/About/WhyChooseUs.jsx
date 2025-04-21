@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, Paper, Container } from "@mui/material";
 
 const WhyChooseUs = () => {
   const reasons = [
@@ -26,29 +26,62 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <Box sx={{ textAlign: "center", padding: "50px 20px" }}>
+    <Box sx={{ backgroundColor: "#F9F8F4", py: 8 }}>
       <Box
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          mb: 4,
+        }}
       >
         <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
         <Typography
           variant="h4"
-          sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2, textAlign: "center" }}
+          sx={{
+            fontWeight: "bold",
+            color: "#8B8B5E",
+            textAlign: "center",
+            mx: { xs: 1, sm: 2 },
+          }}
         >
-         WHY CHOOSE US?
+          WHY CHOOSE US?
         </Typography>
         <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
       </Box>
-      <Grid container spacing={4} justifyContent="center">
-        {reasons.map((reason, index) => (
-          <Grid item xs={12} md={5} key={index}>
-            <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
-              {reason.title}
-            </Typography>
-            <Typography variant="body1">{reason.description}</Typography>
-          </Grid>
-        ))}
-      </Grid>
+
+      <Container>
+        <Grid container spacing={4} justifyContent="center">
+          {reasons.map((reason, index) => (
+            <Grid item xs={12} sm={6} md={6} key={index}>
+              <Paper
+                elevation={3}
+                sx={{
+                  p: 3,
+                  height: "100%",
+                  borderRadius: "16px",
+                  backgroundColor: "#fff",
+                  transition: "0.3s",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+                  },
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  sx={{ fontWeight: "bold", color: "#8B7E66", mb: 1 }}
+                >
+                  {reason.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {reason.description}
+                </Typography>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </Box>
   );
 };

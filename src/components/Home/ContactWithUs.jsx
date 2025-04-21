@@ -3,15 +3,30 @@ import { Box, Typography, Button } from "@mui/material";
 
 const ContactWithUs = () => {
   return (
-    <Box sx={{ textAlign: "center", bgcolor: "#fff", p: 6 }}>
-      {/* Contact Us Title with Horizontal Lines */}
-      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", mb: 3 }}>
-        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-        <Typography variant="h4" sx={{ fontWeight: "bold", color: "#8B8B5E", mx: 2 }}>
-          CONTACT US
-        </Typography>
-        <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
-      </Box>
+    <Box sx={{ textAlign: "center", bgcolor: "#fff", py:4 }}>
+     <Box
+             sx={{
+               display: "flex",
+               alignItems: "center",
+               justifyContent: "center",
+               mb: 2,
+             }}
+           >
+             <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+             <Typography
+               variant="h4"
+               sx={{
+                 fontWeight: "bold",
+                 color: "#8B8B5E",
+                 mx: 2,
+                 textAlign: "center",
+                 py: 4,
+               }}
+             >
+               CONTACT US
+             </Typography>
+             <Box sx={{ flexGrow: 1, height: "2px", bgcolor: "#8B8B5E" }} />
+           </Box>
 
       {/* Subtitle */}
       <Typography variant="h6" sx={{ fontWeight: "medium", color: "#333", mb: 2 }}>

@@ -8,14 +8,12 @@ import ContactWithUs from "../components/Home/ContactWithUs";
 
 const About = () => {
     return (
-        <>
-          
+        <>          
             <AboutHeader/>
             <WhyChooseUs/>
             <AboutKreateSystem/>
             <WorkWithUs/>
-            <ContactWithUs/>
-            
+            <ContactWithUs/>            
         </>
     );
 };
