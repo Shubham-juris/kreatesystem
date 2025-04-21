@@ -1,16 +1,31 @@
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography, Link as MuiLink } from "@mui/material";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Consulting Service", path: "/consultingservices" },
+    { name: "Digital Marketing", path: "/digitalmarketing" },
+    { name: "Graphic Design", path: "/graphicdesign" },
+    { name: "UI/UX Design", path: "/UiUxDesign" },
+    { name: "Web Development", path: "/webdevelopement" },
+    { name: "E-commerce Solutions", path: "/ecommerceheader" },
+    { name: "Software Development", path: "/softwaresolutionssection" },
+    { name: "Contact us", path: "/contactus" },
+  ];
+
   return (
     <Box
       sx={{
         bgcolor: "#EAEAA6",
-        color: "#000", 
+        color: "#000",
         textAlign: "center",
         p: 3,
       }}
     >
-      {/* Navigation Links */}
       <Box
         sx={{
           display: "flex",
@@ -20,39 +35,36 @@ const Footer = () => {
           mb: 2,
         }}
       >
-        {[
-          "Home",
-          "About",
-          "Consulting Service",
-          "Digital Marketing",
-          "Graphic Design",
-          "UI/UX Design",
-          "Web Development",
-          "E-commerce Solutions",
-          "Software Development",
-          "Contact us",
-        ].map((item) => (
-          <Typography
-            key={item}
-            variant="body2"
-            sx={{
-              cursor: "pointer",
-              "&:hover": { textDecoration: "underline" },
-            }}
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            to={item.path}
+            style={{ textDecoration: "none" }}
           >
-            {item}
-          </Typography>
+            <Typography
+              variant="body2"
+              sx={{
+                color: location.pathname === item.path ? "#ff6b6b" : "#000", // Highlight active item
+                fontWeight: location.pathname === item.path ? "bold" : "normal",
+                "&:hover": {
+                  textDecoration: "underline",
+                  color: "#007BFF",
+                },
+              }}
+            >
+              {item.name}
+            </Typography>
+          </Link>
         ))}
       </Box>
 
-      {/* Footer Information */}
       <Typography variant="h6" fontWeight="bold" mb={1}>
         Kreate Systems
       </Typography>
       <Typography variant="body2">
         Kreate Systems - All Rights Reserved.
       </Typography>
-      <Link
+      <MuiLink
         href="mailto:Kreatesystems8@gmail.com"
         sx={{
           display: "block",
@@ -63,7 +75,7 @@ const Footer = () => {
         }}
       >
         Kreatesystems8@gmail.com
-      </Link>
+      </MuiLink>
     </Box>
   );
 };

@@ -91,6 +91,15 @@ function Navbar({ window }) {
     borderBottom: location.pathname === path ? "3px solid #ff6b6b" : "none",
   });
 
+  const menuItemStyle = (path) => ({
+    color: location.pathname === path ? "#ff6b6b" : "#fff",
+    fontWeight: location.pathname === path ? "bold" : "normal",
+    backgroundColor: location.pathname === path ? "rgba(255, 107, 107, 0.1)" : "transparent",
+    "&:hover": {
+      backgroundColor: location.pathname === path ? "rgba(255, 107, 107, 0.2)" : "rgba(255, 255, 255, 0.1)",
+    },
+  });
+
   const menuStyle = {
     "& .MuiPaper-root": {
       backgroundColor: "#111",
@@ -157,22 +166,40 @@ function Navbar({ window }) {
                 >
                   {item === "SERVICES" && (
                     <>
-                      <MenuItem component={Link} to="/businessheader">Business Process</MenuItem>
-                      <MenuItem component={Link} to="/consultingservices">Consulting Service</MenuItem>
-                      <MenuItem component={Link} to="/digitalmarketing">Digital Marketing</MenuItem>
-                      <MenuItem component={Link} to="/graphicdesign">Graphic Design</MenuItem>
-                      <MenuItem component={Link} to="/UiUxDesign">UI/UX Design</MenuItem>
-                      <MenuItem component={Link} to="/webdevelopement">Web Development</MenuItem>
+                      <MenuItem component={Link} to="/businessheader" sx={menuItemStyle("/businessheader")}>
+                        Business Process
+                      </MenuItem>
+                      <MenuItem component={Link} to="/consultingservices" sx={menuItemStyle("/consultingservices")}>
+                        Consulting Service
+                      </MenuItem>
+                      <MenuItem component={Link} to="/digitalmarketing" sx={menuItemStyle("/digitalmarketing")}>
+                        Digital Marketing
+                      </MenuItem>
+                      <MenuItem component={Link} to="/graphicdesign" sx={menuItemStyle("/graphicdesign")}>
+                        Graphic Design
+                      </MenuItem>
+                      <MenuItem component={Link} to="/UiUxDesign" sx={menuItemStyle("/UiUxDesign")}>
+                        UI/UX Design
+                      </MenuItem>
+                      <MenuItem component={Link} to="/webdevelopement" sx={menuItemStyle("/webdevelopement")}>
+                        Web Development
+                      </MenuItem>
                     </>
                   )}
                   {item === "SOLUTIONS" && (
                     <>
-                      <MenuItem component={Link} to="/ecommerceheader">E-commerce Solutions</MenuItem>
-                      <MenuItem component={Link} to="/softwaresolutionssection">Software Development</MenuItem>
+                      <MenuItem component={Link} to="/ecommerceheader" sx={menuItemStyle("/ecommerceheader")}>
+                        E-commerce Solutions
+                      </MenuItem>
+                      <MenuItem component={Link} to="/softwaresolutionssection" sx={menuItemStyle("/softwaresolutionssection")}>
+                        Software Development
+                      </MenuItem>
                     </>
                   )}
                   {item === "CASE STUDIES" && (
-                    <MenuItem component={Link} to="/">IT Cases</MenuItem>
+                    <MenuItem component={Link} to="/" sx={menuItemStyle("/")}>
+                      IT Cases
+                    </MenuItem>
                   )}
                 </Menu>
               </>
@@ -255,22 +282,40 @@ function Navbar({ window }) {
                       >
                         {item === "SERVICES" && (
                           <>
-                            <MenuItem component={Link} to="/businessheader">Business Process</MenuItem>
-                            <MenuItem component={Link} to="/consultingservices">Consulting Service</MenuItem>
-                            <MenuItem component={Link} to="/digitalmarketing">Digital Marketing</MenuItem>
-                            <MenuItem component={Link} to="/graphicdesign">Graphic Design</MenuItem>
-                            <MenuItem component={Link} to="/UiUxDesign">UI/UX Design</MenuItem>
-                            <MenuItem component={Link} to="/webdevelopement">Web Development</MenuItem>
+                            <MenuItem component={Link} to="/businessheader" sx={menuItemStyle("/businessheader")}>
+                              Business Process
+                            </MenuItem>
+                            <MenuItem component={Link} to="/consultingservices" sx={menuItemStyle("/consultingservices")}>
+                              Consulting Service
+                            </MenuItem>
+                            <MenuItem component={Link} to="/digitalmarketing" sx={menuItemStyle("/digitalmarketing")}>
+                              Digital Marketing
+                            </MenuItem>
+                            <MenuItem component={Link} to="/graphicdesign" sx={menuItemStyle("/graphicdesign")}>
+                              Graphic Design
+                            </MenuItem>
+                            <MenuItem component={Link} to="/UiUxDesign" sx={menuItemStyle("/UiUxDesign")}>
+                              UI/UX Design
+                            </MenuItem>
+                            <MenuItem component={Link} to="/webdevelopement" sx={menuItemStyle("/webdevelopement")}>
+                              Web Development
+                            </MenuItem>
                           </>
                         )}
                         {item === "SOLUTIONS" && (
                           <>
-                            <MenuItem component={Link} to="/ecommerceheader">E-commerce Solutions</MenuItem>
-                            <MenuItem component={Link} to="/softwaresolutionssection">Software Development</MenuItem>
+                            <MenuItem component={Link} to="/ecommerceheader" sx={menuItemStyle("/ecommerceheader")}>
+                              E-commerce Solutions
+                            </MenuItem>
+                            <MenuItem component={Link} to="/softwaresolutionssection" sx={menuItemStyle("/softwaresolutionssection")}>
+                              Software Development
+                            </MenuItem>
                           </>
                         )}
                         {item === "CASE STUDIES" && (
-                          <MenuItem component={Link} to="/">IT Cases</MenuItem>
+                          <MenuItem component={Link} to="/" sx={menuItemStyle("/")}>
+                            IT Cases
+                          </MenuItem>
                         )}
                       </Menu>
                     </Box>
