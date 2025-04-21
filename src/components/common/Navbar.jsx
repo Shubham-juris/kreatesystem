@@ -1,5 +1,22 @@
-import React, { useState, useEffect } from "react"; // useEffect ko import kiya
-import {AppBar,Box,CssBaseline,Divider,Drawer,IconButton,List,ListItem,ListItemButton,ListItemText,Toolbar,Typography,Button,Menu,MenuItem,useMediaQuery,
+import React, { useState, useEffect } from "react";
+import {
+  AppBar,
+  Box,
+  CssBaseline,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+  Typography,
+  Button,
+  Menu,
+  MenuItem,
+  useMediaQuery,
+  Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -7,9 +24,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { useTheme } from "@mui/material/styles";
 import { keyframes } from "@emotion/react";
-import { Link, useLocation } from "react-router-dom"; // useLocation ko import kiya
+import { Link, useLocation } from "react-router-dom";
 
-// Constants
 const DRAWER_WIDTH = 245;
 const NAV_ITEMS = [
   "Home",
@@ -21,13 +37,11 @@ const NAV_ITEMS = [
   "Careers",
 ];
 
-// Animation
 const slideDown = keyframes`
   from { transform: translateY(-100%); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 `;
 
-// Styles
 const navButtonStyle = {
   color: "#283878",
   fontSize: "1rem",
@@ -61,34 +75,26 @@ const menuStyle = {
 };
 
 function Navbar({ window }) {
-  // State Management
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorElServices, setAnchorElServices] = useState(null);
   const [anchorElSolutions, setAnchorElSolutions] = useState(null);
   const [anchorElCaseStudies, setAnchorElCaseStudies] = useState(null);
 
-  // Theme and Responsive Handling
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const location = useLocation();
 
-  // Menu State Booleans
   const isServicesOpen = Boolean(anchorElServices);
   const isSolutionsOpen = Boolean(anchorElSolutions);
   const isCaseStudiesOpen = Boolean(anchorElCaseStudies);
 
-  // Location Hook for Route Change Detection
-  const location = useLocation();
-
-  // Effect to Close Menus on Route Change
   useEffect(() => {
-    // Jab bhi location (route) change hota hai, saare dropdowns aur drawer close ho jayenge
     setAnchorElServices(null);
     setAnchorElSolutions(null);
     setAnchorElCaseStudies(null);
-    setMobileOpen(false); // Optional: Drawer bhi close karna chahte ho to
-  }, [location]); // Dependency array mein location daala, taaki har route change pe trigger ho
+    setMobileOpen(false);
+  }, [location]);
 
-  // Event Handlers
   const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
   const handleMenuOpen = (event, type) => {
@@ -123,7 +129,6 @@ function Navbar({ window }) {
     }
   };
 
-  // Drawer Content
   const drawerContent = (
     <Box sx={{ textAlign: "left", p: 2 }}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
@@ -138,9 +143,9 @@ function Navbar({ window }) {
       <List>
         {NAV_ITEMS.map((item) => (
           <ListItem key={item} disablePadding>
-            {item === "SERVICES" ? (
+            {["SERVICES", "SOLUTIONS", "CASE STUDIES"].includes(item) ? (
               <>
-                <ListItemButton onClick={(e) => handleMenuOpen(e, "SERVICES")}>
+                <ListItemButton onClick={(e) => handleMenuOpen(e, item)}>
                   <ListItemText
                     primary={item}
                     primaryTypographyProps={{
@@ -150,92 +155,73 @@ function Navbar({ window }) {
                       textTransform: "uppercase",
                     }}
                   />
-                  {isServicesOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                  {(item === "SERVICES" && isServicesOpen) ||
+                  (item === "SOLUTIONS" && isSolutionsOpen) ||
+                  (item === "CASE STUDIES" && isCaseStudiesOpen) ? (
+                    <ExpandLessIcon />
+                  ) : (
+                    <ExpandMoreIcon />
+                  )}
                 </ListItemButton>
                 <Menu
-                  anchorEl={anchorElServices}
-                  open={isServicesOpen}
-                  onClose={() => handleMenuClose("SERVICES")}
+                  anchorEl={
+                    item === "SERVICES"
+                      ? anchorElServices
+                      : item === "SOLUTIONS"
+                      ? anchorElSolutions
+                      : anchorElCaseStudies
+                  }
+                  open={
+                    item === "SERVICES"
+                      ? isServicesOpen
+                      : item === "SOLUTIONS"
+                      ? isSolutionsOpen
+                      : isCaseStudiesOpen
+                  }
+                  onClose={() => handleMenuClose(item)}
                   sx={menuStyle}
                 >
-                  <MenuItem component={Link} to="/businessheader" onClick={() => handleMenuClose("SERVICES")}>
-                    Business Process
-                  </MenuItem>
-                  <MenuItem component={Link} to="/consultingservices" onClick={() => handleMenuClose("SERVICES")}>
-                    Consulting Service
-                  </MenuItem>
-                  <MenuItem component={Link} to="/digitalmarketing" onClick={() => handleMenuClose("SERVICES")}>
-                    Digital Marketing
-                  </MenuItem>
-                  <MenuItem component={Link} to="/graphicdesign" onClick={() => handleMenuClose("SERVICES")}>
-                    Graphic Design
-                  </MenuItem>
-                  <MenuItem component={Link} to="/UiUxDesign" onClick={() => handleMenuClose("SERVICES")}>
-                    UI/UX Design
-                  </MenuItem>
-                  <MenuItem component={Link} to="/webdevelopement" onClick={() => handleMenuClose("SERVICES")}>
-                    Web Development
-                  </MenuItem>
-                </Menu>
-              </>
-            ) : item === "SOLUTIONS" ? (
-              <>
-                <ListItemButton onClick={(e) => handleMenuOpen(e, "SOLUTIONS")}>
-                  <ListItemText
-                    primary={item}
-                    primaryTypographyProps={{
-                      fontSize: "1.3rem",
-                      fontWeight: "bold",
-                      color: "#283878",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                  {isSolutionsOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                </ListItemButton>
-                <Menu
-                  anchorEl={anchorElSolutions}
-                  open={isSolutionsOpen}
-                  onClose={() => handleMenuClose("SOLUTIONS")}
-                  sx={menuStyle}
-                >
-                  <MenuItem component={Link} to="/ecommerceheader" onClick={() => handleMenuClose("SOLUTIONS")}>
-                    E-commerce Solutions
-                  </MenuItem>
-                  <MenuItem component={Link} to="/softwaresolutionssection" onClick={() => handleMenuClose("SOLUTIONS")}>
-                    Software Development
-                  </MenuItem>
-                </Menu>
-              </>
-            ) : item === "CASE STUDIES" ? (
-              <>
-                <ListItemButton onClick={(e) => handleMenuOpen(e, "CASE STUDIES")}>
-                  <ListItemText
-                    primary={item}
-                    primaryTypographyProps={{
-                      fontSize: "1.3rem",
-                      fontWeight: "bold",
-                      color: "#283878",
-                      textTransform: "uppercase",
-                    }}
-                  />
-                  {isCaseStudiesOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                </ListItemButton>
-                <Menu
-                  anchorEl={anchorElCaseStudies}
-                  open={isCaseStudiesOpen}
-                  onClose={() => handleMenuClose("CASE STUDIES")}
-                  sx={menuStyle}
-                >
-                  <MenuItem component={Link} to="/" onClick={() => handleMenuClose("CASE STUDIES")}>
-                    IT Cases
-                  </MenuItem>
+                  {item === "SERVICES" && (
+                    <>
+                      <MenuItem component={Link} to="/businessheader" onClick={() => handleMenuClose(item)}>
+                        Business Process
+                      </MenuItem>
+                      <MenuItem component={Link} to="/consultingservices" onClick={() => handleMenuClose(item)}>
+                        Consulting Service
+                      </MenuItem>
+                      <MenuItem component={Link} to="/digitalmarketing" onClick={() => handleMenuClose(item)}>
+                        Digital Marketing
+                      </MenuItem>
+                      <MenuItem component={Link} to="/graphicdesign" onClick={() => handleMenuClose(item)}>
+                        Graphic Design
+                      </MenuItem>
+                      <MenuItem component={Link} to="/UiUxDesign" onClick={() => handleMenuClose(item)}>
+                        UI/UX Design
+                      </MenuItem>
+                      <MenuItem component={Link} to="/webdevelopement" onClick={() => handleMenuClose(item)}>
+                        Web Development
+                      </MenuItem>
+                    </>
+                  )}
+                  {item === "SOLUTIONS" && (
+                    <>
+                      <MenuItem component={Link} to="/ecommerceheader" onClick={() => handleMenuClose(item)}>
+                        E-commerce Solutions
+                      </MenuItem>
+                      <MenuItem component={Link} to="/softwaresolutionssection" onClick={() => handleMenuClose(item)}>
+                        Software Development
+                      </MenuItem>
+                    </>
+                  )}
+                  {item === "CASE STUDIES" && (
+                    <MenuItem component={Link} to="/" onClick={() => handleMenuClose(item)}>
+                      IT Cases
+                    </MenuItem>
+                  )}
                 </Menu>
               </>
             ) : (
-              <ListItemButton
-                component={Link}
-                to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
-              >
+              <ListItemButton component={Link} to={`/${item.toLowerCase().replace(/\s+/g, "")}`}>
                 <ListItemText
                   primary={item}
                   primaryTypographyProps={{
@@ -268,142 +254,112 @@ function Navbar({ window }) {
         }}
         component="nav"
       >
-        <Toolbar>
-          {isMobile && (
-            <IconButton
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon sx={{ color: "#283878", fontSize: "2rem" }} />
-            </IconButton>
-          )}
-          <Typography
-            variant="h5"
-            fontWeight="bold"
-            component="div"
-            sx={{ color: "#283878", flexGrow: 1 }}
-          >
-            Kreatesystem
-          </Typography>
-          {!isMobile && (
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              {NAV_ITEMS.map((item) =>
-                item === "SERVICES" ? (
-                  <Box key={item}>
+        <Container maxWidth="lg">
+          <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
+            {isMobile && (
+              <IconButton edge="start" onClick={handleDrawerToggle} sx={{ mr: 2 }}>
+                <MenuIcon sx={{ color: "#283878", fontSize: "2rem" }} />
+              </IconButton>
+            )}
+            <Typography variant="h5" fontWeight="bold" sx={{ color: "#283878" }}>
+              Kreatesystem
+            </Typography>
+            {!isMobile && (
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                {NAV_ITEMS.map((item) =>
+                  ["SERVICES", "SOLUTIONS", "CASE STUDIES"].includes(item) ? (
+                    <Box key={item}>
+                      <Button onClick={(e) => handleMenuOpen(e, item)} sx={navButtonStyle}>
+                        {item}{" "}
+                        {(item === "SERVICES" && isServicesOpen) ||
+                        (item === "SOLUTIONS" && isSolutionsOpen) ||
+                        (item === "CASE STUDIES" && isCaseStudiesOpen) ? (
+                          <ExpandLessIcon />
+                        ) : (
+                          <ExpandMoreIcon />
+                        )}
+                      </Button>
+                      <Menu
+                        anchorEl={
+                          item === "SERVICES"
+                            ? anchorElServices
+                            : item === "SOLUTIONS"
+                            ? anchorElSolutions
+                            : anchorElCaseStudies
+                        }
+                        open={
+                          item === "SERVICES"
+                            ? isServicesOpen
+                            : item === "SOLUTIONS"
+                            ? isSolutionsOpen
+                            : isCaseStudiesOpen
+                        }
+                        onClose={() => handleMenuClose(item)}
+                        sx={menuStyle}
+                      >
+                        {item === "SERVICES" && (
+                          <>
+                            <MenuItem component={Link} to="/businessheader">Business Process</MenuItem>
+                            <MenuItem component={Link} to="/consultingservices">Consulting Service</MenuItem>
+                            <MenuItem component={Link} to="/digitalmarketing">Digital Marketing</MenuItem>
+                            <MenuItem component={Link} to="/graphicdesign">Graphic Design</MenuItem>
+                            <MenuItem component={Link} to="/UiUxDesign">UI/UX Design</MenuItem>
+                            <MenuItem component={Link} to="/webdevelopement">Web Development</MenuItem>
+                          </>
+                        )}
+                        {item === "SOLUTIONS" && (
+                          <>
+                            <MenuItem component={Link} to="/ecommerceheader">E-commerce Solutions</MenuItem>
+                            <MenuItem component={Link} to="/softwaresolutionssection">Software Development</MenuItem>
+                          </>
+                        )}
+                        {item === "CASE STUDIES" && (
+                          <MenuItem component={Link} to="/">IT Cases</MenuItem>
+                        )}
+                      </Menu>
+                    </Box>
+                  ) : (
                     <Button
-                      onClick={(e) => handleMenuOpen(e, "SERVICES")}
+                      key={item}
+                      component={Link}
+                      to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
                       sx={navButtonStyle}
                     >
-                      {item} {isServicesOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                      {item}
                     </Button>
-                    <Menu
-                      anchorEl={anchorElServices}
-                      open={isServicesOpen}
-                      onClose={() => handleMenuClose("SERVICES")}
-                      MenuListProps={{ onMouseLeave: () => handleMenuClose("SERVICES") }}
-                      sx={menuStyle}
-                    >
-                      <MenuItem component={Link} to="/businessheader" onClick={() => handleMenuClose("SERVICES")}>
-                        Business Process
-                      </MenuItem>
-                      <MenuItem component={Link} to="/consultingservices" onClick={() => handleMenuClose("SERVICES")}>
-                        Consulting Service
-                      </MenuItem>
-                      <MenuItem component={Link} to="/digitalmarketing" onClick={() => handleMenuClose("SERVICES")}>
-                        Digital Marketing
-                      </MenuItem>
-                      <MenuItem component={Link} to="/graphicdesign" onClick={() => handleMenuClose("SERVICES")}>
-                        Graphic Design
-                      </MenuItem>
-                      <MenuItem component={Link} to="/UiUxDesign" onClick={() => handleMenuClose("SERVICES")}>
-                        UI/UX Design
-                      </MenuItem>
-                      <MenuItem component={Link} to="/webdevelopement" onClick={() => handleMenuClose("SERVICES")}>
-                        Web Development
-                      </MenuItem>
-                    </Menu>
-                  </Box>
-                ) : item === "SOLUTIONS" ? (
-                  <Box key={item}>
-                    <Button
-                      onClick={(e) => handleMenuOpen(e, "SOLUTIONS")}
-                      sx={navButtonStyle}
-                    >
-                      {item} {isSolutionsOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                    </Button>
-                    <Menu
-                      anchorEl={anchorElSolutions}
-                      open={isSolutionsOpen}
-                      onClose={() => handleMenuClose("SOLUTIONS")}
-                      MenuListProps={{ onMouseLeave: () => handleMenuClose("SOLUTIONS") }}
-                      sx={menuStyle}
-                    >
-                      <MenuItem component={Link} to="/ecommerceheader" onClick={() => handleMenuClose("SOLUTIONS")}>
-                        E-commerce Solutions
-                      </MenuItem>
-                      <MenuItem component={Link} to="/softwaresolutionssection" onClick={() => handleMenuClose("SOLUTIONS")}>
-                        Software Development
-                      </MenuItem>
-                    </Menu>
-                  </Box>
-                ) : item === "CASE STUDIES" ? (
-                  <Box key={item}>
-                    <Button
-                      onClick={(e) => handleMenuOpen(e, "CASE STUDIES")}
-                      sx={navButtonStyle}
-                    >
-                      {item} {isCaseStudiesOpen ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                    </Button>
-                    <Menu
-                      anchorEl={anchorElCaseStudies}
-                      open={isCaseStudiesOpen}
-                      onClose={() => handleMenuClose("CASE STUDIES")}
-                      MenuListProps={{ onMouseLeave: () => handleMenuClose("CASE STUDIES") }}
-                      sx={menuStyle}
-                    >
-                      <MenuItem component={Link} to="/" onClick={() => handleMenuClose("CASE STUDIES")}>
-                        IT Cases
-                      </MenuItem>
-                    </Menu>
-                  </Box>
-                ) : (
-                  <Button
-                    key={item}
-                    component={Link}
-                    to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
-                    sx={navButtonStyle}
-                  >
-                    {item}
-                  </Button>
-                )
-              )}
-            </Box>
-          )}
-        </Toolbar>
+                  )
+                )}
+              </Box>
+            )}
+          </Toolbar>
+        </Container>
       </AppBar>
-      <nav>
+
+      <Box component="nav">
         <Drawer
           container={container}
           variant="temporary"
-          anchor="left"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{ keepMounted: true }}
+          ModalProps={{
+            keepMounted: true,
+          }}
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: DRAWER_WIDTH,
-              background: "#f8f9fa",
+              backgroundColor: "#fff",
+              color: "#000",
             },
           }}
         >
           {drawerContent}
         </Drawer>
-      </nav>
+      </Box>
     </Box>
   );
 }
 
 export default Navbar;
+ 

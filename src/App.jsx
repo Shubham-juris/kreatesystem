@@ -7,7 +7,9 @@ import Navbar from "./components/common/Navbar";
 function App() {
   return (
     <>
+    <div className=" justify-center items-center ">
       <Navbar/>
+      </div>
       <AppRoutes />
       <Footer/>
      

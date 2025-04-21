@@ -11,7 +11,7 @@ const Hero = () => {
       sx={{
         position: "relative",
         width: "100%",
-        height: "100vh",
+        height: "700px",
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",

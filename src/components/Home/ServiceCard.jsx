@@ -9,11 +9,11 @@ import CRMImage from '../../assets/DigitalMarketingImg/img5.jpg';
 
 const ServiceCard = () => {
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
+    <Container maxWidth="lg" sx={{ py: 5 }}>
       <Typography variant="h2" component="h1" align="center" gutterBottom sx={{ color: '#8B7E66', fontSize: { xs: '1.5rem', sm: '2.5rem' } }}>
         How can we help you?
       </Typography>
-      <Grid container spacing={4} justifyContent="center" sx={{ display: 'flex', flexWrap: 'wrap' }}>
+      <Grid container spacing={4} justifyContent="center" sx={{ py: 4, display: 'flex', flexWrap: 'wrap' }}>
         {[{
           image: WebImage,
           title: "Web Development",
