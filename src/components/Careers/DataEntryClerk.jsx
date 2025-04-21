@@ -1,24 +1,21 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import { 
   Box, 
   Typography, 
   TextField, 
   Button, 
-  Link,
   styled,
   Container,
-  Divider,
 } from "@mui/material";
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 
-// Styled components for consistent theming
+
 const JobContainer = styled(Container)(({ theme }) => ({
   padding: theme.spacing(5),
-  paddingTop: theme.spacing(12), // Adjusted for nav bar and better spacing
-  backgroundColor: "white", // White background as per image
-  color: "black", // Black text as per image
-  minHeight: "calc(100vh - 64px)", // Subtracts typical nav bar height
+  paddingTop: theme.spacing(12), 
+  backgroundColor: "white",
+  color: "black", 
+  minHeight: "calc(100vh - 64px)", 
   [theme.breakpoints.down('sm')]: {
     padding: theme.spacing(2),
     paddingTop: theme.spacing(10),
@@ -28,16 +25,16 @@ const JobContainer = styled(Container)(({ theme }) => ({
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
   marginBottom: theme.spacing(2),
-  color: "#6D4C41", // Brownish color for headings as per image
+  color: "#6D4C41",
   fontSize: "1.5rem",
 }));
 
 const SubmitButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1.5, 3),
   fontWeight: 700,
-  backgroundColor: "#D4E157", // Light green button color as per image
+  backgroundColor: "#D4E157",
   color: "black",
-  borderRadius: "50px", // Rounded button as per image
+  borderRadius: "50px",
   textTransform: "uppercase",
   "&:hover": {
     backgroundColor: "#C0CA33",
@@ -51,7 +48,7 @@ const DataEntryClerk = () => {
   const handleFileChange = (event) => {
     const files = Array.from(event.target.files);
     setSelectedFiles((prevFiles) => [...prevFiles, ...files]);
-    event.target.value = null; // Reset input to allow re-uploading the same file
+    event.target.value = null; 
   };
 
   const handleAttachClick = () => {
@@ -67,7 +64,7 @@ const DataEntryClerk = () => {
           fontWeight: 800,
           letterSpacing: "2px",
           mb: 4,
-          color: "#6D4C41", // Brownish color as per image
+          color: "#6D4C41",
           textTransform: "uppercase",
           borderBottom: "2px solid #6D4C41",
           paddingBottom: theme => theme.spacing(1),
@@ -81,7 +78,6 @@ const DataEntryClerk = () => {
         flexDirection: { xs: "column", md: "row" }, 
         gap: { xs: 2, md: 4 },
       }}>
-        {/* Job Details Section */}
         <Box sx={{ flex: 1, maxWidth: { md: "55%" } }}>
           <SectionTitle variant="h5">Data Entry Clerk</SectionTitle>
           <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: "black" }}>
@@ -148,7 +144,6 @@ const DataEntryClerk = () => {
           </Typography>
         </Box>
 
-        {/* Application Form Section */}
         <Box sx={{ 
           width: { xs: "100%", md: "40%" }, 
           p: { xs: 2, md: 4 },
@@ -179,7 +174,7 @@ const DataEntryClerk = () => {
           
           <TextField
             fullWidth
-            label="Email*"
+            label="Email"
             variant="outlined"
             margin="normal"
             required

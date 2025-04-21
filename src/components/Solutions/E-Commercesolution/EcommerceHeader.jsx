@@ -70,7 +70,6 @@ const Ecommerceheader = () => {
 
   return (
     <>
-      {/* Header Section */}
       <Box
         sx={{
           position: "relative",
@@ -118,120 +117,114 @@ const Ecommerceheader = () => {
         </motion.div>
       </Box>
 
-      {/* Intro Section */}
-      <Container 
-  maxWidth="lg" 
-  sx={{ 
-    textAlign: "center", 
-    py: { xs: 2, sm: 4, md: 6 }, 
-    px: { xs: 1, sm: 2, md: 3 }, 
-  }}
->
-  <Box 
-    display="flex" 
-    alignItems="center" 
-    justifyContent="center" 
-    mb={{ xs: 2, sm: 3, md: 4 }} 
-    sx={{
-      flexDirection: { xs: "column", sm: "row" }, 
-      gap: { xs: 1, sm: 2, md: 3 }, 
-      width: "100%", 
-      px: { xs: 0, sm: 1, md: 2 }, 
-    }}
-  >
-    <Divider
-      sx={{
-        flexGrow: { xs: 0, sm: 1 }, 
-        bgcolor: "#A5A585",
-        height: 2,
-        width: { xs: "40%", sm: "auto" }, 
-        mx: { xs: 0, sm: 1, md: 2 }, 
-      }}
-    />
-    <Typography
-      variant={isSmallScreen ? "h6" : isMediumScreen ? "h5" : "h4"} 
-      fontFamily="'Times New Roman', serif"
-      textTransform="uppercase"
-      sx={{
-        fontWeight: 500,
-        color: "#A5A585",
-        whiteSpace: "nowrap",
-        px: { xs: 0, sm: 1, md: 2 }, 
-        fontSize: { xs: "0.875rem", sm: "1rem", md: "1.75rem" }, // Desktop (md) ke liye bada font size
-        lineHeight: 1.2, 
-      }}
-    >
-      Innovative Custom Software Solutions
-    </Typography>
-    <Divider
-      sx={{
-        flexGrow: { xs: 0, sm: 1 }, 
-        bgcolor: "#A5A585",
-        height: 2,
-        width: { xs: "40%", sm: "auto" }, 
-        mx: { xs: 0, sm: 1, md: 2 }, 
-      }}
-    />
-  </Box>
-  <Typography
-    variant="body1"
-    color="text.secondary"
-    sx={{
-      maxWidth: { xs: "100%", sm: "90%", md: "70%" }, 
-      mx: "auto",
-      lineHeight: 1.6, 
-      fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" }, 
-      px: { xs: 1, sm: 0 }, 
-      mt: { xs: 2, sm: 3 }, 
-    }}
-  >
-    At Kreate Solution Systems, we understand the pivotal role e-commerce
-    plays in modern businesses' success. We believe that a well-crafted
-    online presence can significantly impact a company’s growth and
-    profitability.
-  </Typography>
-</Container>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        mb={{ xs: 2, sm: 3, md: 4 }}
+        sx={{
+          flexDirection: { xs: "column", sm: "row" },
+          gap: { xs: 1, sm: 2, md: 3 },
+          width: "100%",
+          mt: 5,
+        }}
+      >
+        <Divider
+          sx={{
+            flexGrow: { xs: 0, sm: 1 },
+            bgcolor: "#A5A585",
+            height: 2,
+            width: { xs: "40%", sm: "auto" },
+          }}
+        />
+        <Typography
+          variant={isSmallScreen ? "h6" : isMediumScreen ? "h5" : "h4"}
+          fontFamily="'Times New Roman', serif"
+          textTransform="uppercase"
+          sx={{
+            fontWeight: 500,
+            color: "#A5A585",
+            whiteSpace: "nowrap",
+            px: { xs: 0, sm: 1, md: 2 },
+            fontSize: { xs: "0.875rem", sm: "1rem", md: "1.75rem" },
+            lineHeight: 1.2,
+          }}
+        >
+          Innovative Custom Software Solutions
+        </Typography>
+        <Divider
+          sx={{
+            flexGrow: { xs: 0, sm: 1 },
+            bgcolor: "#A5A585",
+            height: 2,
+            width: { xs: "40%", sm: "auto" },
+          }}
+        />
+      </Box>
 
-      {/* Services Section */}
-      <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
-        <Box display="flex" alignItems="center" justifyContent="center" sx={{ mb: 5 }}>
-          <Box
-            sx={{
-              flexGrow: 1,
-              height: "1px",
-              backgroundColor: "#A5A585",
-              mx: { xs: 1, sm: 2 },
-            }}
-          />
-          <Typography
-            variant={isSmallScreen ? "h5" : "h4"}
-            sx={{
-              fontWeight: 500,
-              color: "#A5A585",
-              textAlign: "center",
-              letterSpacing: "2px",
-              fontFamily: "'Times New Roman', serif",
-              textTransform: "uppercase",
-            }}
-          >
-            <Box component="span" display="block">
-              Tailored E-Commerce Solutions
-            </Box>
-            <Box component="span" display="block">
-              for Seamless Online Success
-            </Box>
-          </Typography>
-          <Box
-            sx={{
-              flexGrow: 1,
-              height: "1px",
-              backgroundColor: "#A5A585",
-              mx: { xs: 1, sm: 2 },
-            }}
-          />
-        </Box>
+      <Container>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          sx={{
+            mb: 4,
+            maxWidth: { xs: "100%", sm: "90%", md: "70%" },
+            mx: "auto",
+            lineHeight: 1.6,
+            fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+            px: { xs: 1, sm: 0 },
+            mt: { xs: 2, sm: 3 },
+          }}
+        >
+          At Kreate Solution Systems, we understand the pivotal role e-commerce
+          plays in modern businesses' success. We believe that a well-crafted
+          online presence can significantly impact a company’s growth and
+          profitability.
+        </Typography>
+      </Container>
 
-        {/* First Three Services */}
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        sx={{ pt: 5, mb: 5 }}
+      >
+        <Box
+          sx={{
+            flexGrow: 1,
+            height: "2px",
+            backgroundColor: "#A5A585",
+            mx: 0,
+          }}
+        />
+        <Typography
+          variant={isSmallScreen ? "h5" : "h4"}
+          sx={{
+            fontWeight: 500,
+            color: "#A5A585",
+            textAlign: "center",
+            letterSpacing: "2px",
+            fontFamily: "'Times New Roman', serif",
+            textTransform: "uppercase",
+          }}
+        >
+          <Box component="span" display="block">
+            Tailored E-Commerce Solutions
+          </Box>
+          <Box component="span" display="block">
+            for Seamless Online Success
+          </Box>
+        </Typography>
+        <Box
+          sx={{
+            flexGrow: 1,
+            height: "2px",
+            backgroundColor: "#A5A585",
+          }}
+        />
+      </Box>
+
+      <Container>
         {services.slice(0, 3).map((service, index) => (
           <Grid
             container
@@ -291,9 +284,12 @@ const Ecommerceheader = () => {
             </Grid>
           </Grid>
         ))}
-
-        {/* Transform Section */}
-        <Box display="flex" alignItems="center" justifyContent="center" sx={{ mb: 5 }}>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          sx={{ mb: 5 }}
+        >
           <Box
             sx={{
               flexGrow: 1,
@@ -326,8 +322,7 @@ const Ecommerceheader = () => {
             }}
           />
         </Box>
-
-        {/* Last Four Services */}
+       <Box sx={{ mb: 5 }}>
         <Grid container spacing={{ xs: 3, sm: 4 }} justifyContent="center">
           {services.slice(3).map((service, index) => (
             <Grid item xs={12} sm={6} md={6} key={index}>
@@ -339,7 +334,7 @@ const Ecommerceheader = () => {
                   borderRadius: "12px",
                   boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
                   transition: "box-shadow 0.3s ease",
-                  height: "100%", // Ensure consistent height for all cards
+                  height: "100%",
                   display: "flex",
                   flexDirection: "column",
                   "&:hover": {
@@ -363,7 +358,7 @@ const Ecommerceheader = () => {
                     objectFit: "cover",
                     borderRadius: "50%",
                     boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.1)",
-                    mb: 2,
+                    mb: 4,
                     mx: "auto",
                     display: "block",
                     transition: "transform 0.3s ease",
@@ -377,7 +372,7 @@ const Ecommerceheader = () => {
                     lineHeight: 1.7,
                     fontSize: { xs: "0.85rem", sm: "0.95rem" },
                     px: { xs: 1, sm: 2 },
-                    flexGrow: 1, // Allow description to take available space
+                    flexGrow: 1,
                   }}
                 >
                   {service.description}
@@ -386,6 +381,7 @@ const Ecommerceheader = () => {
             </Grid>
           ))}
         </Grid>
+        </Box>
       </Container>
     </>
   );

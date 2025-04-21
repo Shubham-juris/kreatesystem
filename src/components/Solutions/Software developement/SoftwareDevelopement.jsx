@@ -30,7 +30,7 @@ const ServiceCard = ({ title, description }) => (
     p: 2, 
     borderRadius: '16px', 
     textAlign: 'center', 
-    height: '100%', // Ensure all cards are the same height
+    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -61,12 +61,11 @@ const SoftwareDevelopment = () => {
 
   return (
     <>
-      {/* Header Section */}
       <Box
         sx={{
           position: "relative",
           width: "100%",
-          height: { xs: "30vh", sm: "40vh", md: "50vh", lg: "60vh" },
+          height: { xs: "20vh", sm: "30vh", md: "40vh", lg: "50vh" },
           backgroundImage: `url(${HeaderImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -165,7 +164,7 @@ const SoftwareDevelopment = () => {
                 <Card sx={{ 
                   borderRadius: '16px', 
                   boxShadow: 3, 
-                  height: '100%', // Ensure uniform height
+                  height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
                 }}>
