@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import bgImage from "../../../assets/Bg.png";
 import CustomizedServiceImg from "../../../assets/SolutionImg/CloudServices.png";
-import DedicatedTeamImg from "../../../assets/SolutionImg/CloudServices.png";
+import DedicatedTeamImg from "../../../assets/service/Dedicated.jpg";
 import ProcessEnhancementImg from "../../../assets/SolutionImg/ITConsultingImg.jpg";
 import IndustryInsightImg from "../../../assets/SolutionImg/DevelopmentImg.jpg";
 import ConsistentDeliveryImg from "../../../assets/SolutionImg/CloudServices.png";

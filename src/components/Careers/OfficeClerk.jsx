@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+
 import { 
   Box, 
   Typography, 
   TextField, 
   Button, 
-  Link,
   styled,
   Container,
-  Divider,
+
 } from "@mui/material";
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 
@@ -17,10 +16,7 @@ const JobContainer = styled(Container)(({ theme }) => ({
   paddingTop: theme.spacing(12),
   backgroundColor: "white",
   color: "black", 
-  [theme.breakpoints.down('sm')]: {
-    padding: theme.spacing(2),
-    paddingTop: theme.spacing(10),
-  },
+ 
 }));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
@@ -169,7 +165,7 @@ const OfficeClerk = () => {
         </Box>
 
         <Box sx={{ 
-          width: { xs: "100%", md: "40%" }, 
+          width: { xs: "100%", md: "50%" }, 
           p: { xs: 2, md: 4 },
           backgroundColor: "white",
           borderRadius: 2,
