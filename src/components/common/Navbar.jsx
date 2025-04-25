@@ -115,9 +115,20 @@ function Navbar({ window }) {
   const drawerContent = (
     <Box sx={{ textAlign: "left", p: 2 }}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-        <Typography variant="h6" sx={{ color: "#283878", fontWeight: "bold" }}>
+        <Typography
+          variant="h5"
+          fontWeight="bold"
+          component={Link}
+          to="/"
+          sx={{
+            color: "#283878",
+            textDecoration: "none",
+            '&:hover': { textDecoration: "underline" }
+          }}
+        >
           Kreatesystem
         </Typography>
+
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon sx={{ color: "#283878" }} />
         </IconButton>
@@ -139,8 +150,8 @@ function Navbar({ window }) {
                     }}
                   />
                   {(item === "SERVICES" && isServicesOpen) ||
-                  (item === "SOLUTIONS" && isSolutionsOpen) ||
-                  (item === "CASE STUDIES" && isCaseStudiesOpen) ? (
+                    (item === "SOLUTIONS" && isSolutionsOpen) ||
+                    (item === "CASE STUDIES" && isCaseStudiesOpen) ? (
                     <ExpandLessIcon />
                   ) : (
                     <ExpandMoreIcon />
@@ -151,15 +162,15 @@ function Navbar({ window }) {
                     item === "SERVICES"
                       ? anchorElServices
                       : item === "SOLUTIONS"
-                      ? anchorElSolutions
-                      : anchorElCaseStudies
+                        ? anchorElSolutions
+                        : anchorElCaseStudies
                   }
                   open={
                     item === "SERVICES"
                       ? isServicesOpen
                       : item === "SOLUTIONS"
-                      ? isSolutionsOpen
-                      : isCaseStudiesOpen
+                        ? isSolutionsOpen
+                        : isCaseStudiesOpen
                   }
                   onClose={() => handleMenuClose(item)}
                   sx={menuStyle}
@@ -244,9 +255,20 @@ function Navbar({ window }) {
                 <MenuIcon sx={{ color: "#283878", fontSize: "2rem" }} />
               </IconButton>
             )}
-            <Typography variant="h5" fontWeight="bold" sx={{ color: "#283878" }}>
-              Kreatesystem
-            </Typography>
+            <Typography
+  variant="h5"
+  fontWeight="bold"
+  component={Link}
+  to="/"
+  sx={{
+    color: "#283878",
+    textDecoration: "none",
+    
+  }}
+>
+  Kreatesystem
+</Typography>
+
             {!isMobile && (
               <Box sx={{ display: "flex", alignItems: "center" }}>
                 {NAV_ITEMS.map((item) =>
@@ -255,8 +277,8 @@ function Navbar({ window }) {
                       <Button onClick={(e) => handleMenuOpen(e, item)} sx={navButtonStyle("")}>
                         {item}
                         {(item === "SERVICES" && isServicesOpen) ||
-                        (item === "SOLUTIONS" && isSolutionsOpen) ||
-                        (item === "CASE STUDIES" && isCaseStudiesOpen) ? (
+                          (item === "SOLUTIONS" && isSolutionsOpen) ||
+                          (item === "CASE STUDIES" && isCaseStudiesOpen) ? (
                           <ExpandLessIcon />
                         ) : (
                           <ExpandMoreIcon />
@@ -267,15 +289,15 @@ function Navbar({ window }) {
                           item === "SERVICES"
                             ? anchorElServices
                             : item === "SOLUTIONS"
-                            ? anchorElSolutions
-                            : anchorElCaseStudies
+                              ? anchorElSolutions
+                              : anchorElCaseStudies
                         }
                         open={
                           item === "SERVICES"
                             ? isServicesOpen
                             : item === "SOLUTIONS"
-                            ? isSolutionsOpen
-                            : isCaseStudiesOpen
+                              ? isSolutionsOpen
+                              : isCaseStudiesOpen
                         }
                         onClose={() => handleMenuClose(item)}
                         sx={menuStyle}
