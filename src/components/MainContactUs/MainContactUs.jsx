@@ -127,7 +127,7 @@ const MainContactUs = () => {
               Kreate Systems
             </Typography>
             <Typography variant="body2">
-              Unit #19, 4804 42 Ave, Innisfail, Alberta T4G 1N4, Canada
+              Unit #19, 4804 42 St , Innisfail, Alberta T4G 1N4, Canada
             </Typography>
             <Typography variant="body2">403-352-5061</Typography>
             <Typography variant="body2">Kreatesystems8@gmail.com</Typography>
